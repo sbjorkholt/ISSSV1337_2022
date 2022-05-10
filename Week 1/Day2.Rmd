@@ -1,0 +1,30 @@
+---
+title: "Day2"
+author: "Solveig Bjørkholt"
+date: "28. june 2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Getting hands on coding
+
+
+```{r}
+
+
+```
+
+
+## 
+
+You can also embed plots, for example:
+
+```{r}
+
+
+
+```
+
