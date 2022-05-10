@@ -8,3 +8,6 @@ output: html_document
 
 Hello everyone.
 
+```{r}
+rmarkdown::render('Day1.Rmd', output_file = '../Day1.html')
+```
