@@ -1,8 +1,11 @@
 ---
 title: "Day2"
 author: "Solveig Bjørkholt"
-date: "28. june 2022"
-output: html_document
+date: "28. June 2022"
+output:
+  pdf_document: 
+    keep_md: yes
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}

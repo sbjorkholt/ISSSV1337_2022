@@ -2,8 +2,11 @@
 title: "Day 1"
 subtitle: "Welcome to ISSSV1337"
 author: "Solveig Bjørkholt"
-date: "28. june 2022"
-output: github_document
+date: "27. June 2022"
+output:
+  pdf_document: 
+    keep_md: yes
+  github_document: default
 ---
 
 Hello everyone.
