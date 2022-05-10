@@ -8,9 +8,20 @@ output:
   github_document: default
 ---
 
-Hello everyone.
+Hello everyone!
 
-```{r}
-setwd("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 1/scripts")
-rmarkdown::render('Day1.Rmd', output_dir = "../.")
-```
+Welcome to Political Data Science Hackathon. We're thrilled to have you here with us, and we look forward to spending a great and interesting summer together.
+
+### What is a hackathon?
+
+
+### How does this course work?
+
+
+### What do we expect from you?
+
+
+### How and why to work agile?
+
+
+### The Belbin Strength test

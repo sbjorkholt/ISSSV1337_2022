@@ -1,5 +1,6 @@
 ---
-title: "Day2"
+title: "Day 2"
+subtitle: "Workflow and Github"
 author: "Solveig Bjørkholt"
 date: "28. June 2022"
 output:
@@ -12,8 +13,23 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Getting hands on coding
+# Plan for today
 
+## What we will learn today:
+
+ - What R and RStudio is.
+ - Writing and running code.
+ - Calling functions.
+ - Introduction to Rmarkdown and Jupyter Notebooks.
+ - Paths and directories.
+ - Github
+ 
+## What we will do today:
+ - Set up a shared repository.
+ - Work with version control.
+
+
+# What is R and RStudio?
 
 ```{r}
 
