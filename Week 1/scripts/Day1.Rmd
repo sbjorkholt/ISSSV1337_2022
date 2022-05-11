@@ -42,7 +42,7 @@ That was a little bit about the structure. Now, about the content. Throughout th
 
 This course will not cover everything data science related. In fact, it will only give you a glimpse into the world of data science. However, hopefully it will give you the knowledge you need to pursue more knowledge. You see, data science is a highly cross-disciplinary field, and we need people with different competences. To illustrate, look at the figure below. Many would agree that data science is some sort of cross-over between computer science, statistics and domain expertise. Often, this means building high-end knowledge in one of the circles, and knowing enough about the other circles to be able to work in team-based contexts to draw on each other's specialties. Being able to understand, translate and work cross-disciplinary is an incredibly useful skill.
 
-![The cross-disciplinary nature of data science.](./figures/datascience_figure.png){width=50%}
+![The cross-disciplinary nature of data science.](./scripts/figures/datascience_figure.png){width=50%}
 
 So, what do we mean by the different points above? Well, in short:
 
