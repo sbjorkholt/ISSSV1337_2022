@@ -74,7 +74,7 @@ contexts to draw on each other’s specialties. Being able to understand,
 translate and work cross-disciplinary is an incredibly useful skill.
 
 <figure>
-<img src="./scripts/figures/datascience_figure.png" style="width:50.0%"
+<img src="./scripts/figures/datascience_figure.png" style="width:20.0%"
 alt="The cross-disciplinary nature of data science." />
 <figcaption aria-hidden="true">The cross-disciplinary nature of data
 science.</figcaption>
