@@ -26,11 +26,15 @@ Naturally, we do not expect you to sit tight six weeks in a row and work with ir
 
 ### How does this course work?
 
-This course runs over six weeks. You will produce a report (or an app, if you like), that is related to a problem statement. The problem statements are provided by actors from the work life. You work in teams with people from different disciplinary backgrounds. In the end, you present your final product to the rest of us and the work life actors, and one team wins the hackathon. They receive a price! Otherwise, the course is pass/fail. We expect fun competitiveness and warm cooperativeness.
+This course runs over six weeks. You will produce a report (or an app, if you like), that is related to a problem statement. The problem statements are provided by actors from work life. You work in teams with people from different disciplinary backgrounds. In the end, you present your final product to the rest of us and the work life actors, and one team wins the hackathon. They receive a price! Otherwise, the course is pass/fail. 
 
-Please note: **In the third week, we have a long weekend (14.-17. June) and from week 4, we change location from Blindern to Statistics Norway (Akersveien 26).**
+Most days we provide some tasks to work on in the second half of the lecture, but there are no hand-ins except for the final report. The lectures run from 10:00 to 12:00, and are organized so that the first hour is theory, while the second hour is focused on practice. 
 
-Throughout the course, we have three goals in mind:
+Please note: *In the third week, we have a long weekend (14.-17. June) and from week 4, we change location from Blindern to Statistics Norway (Akersveien 26).*
+
+\
+
+That was a little bit about the structure. Now, about the content. Throughout the course, we have three goals in mind:
 
 1.  Introduce and teach some basic data science skills.
 2.  Demonstrate how to work effectively in cross-disciplinary teams.
@@ -39,7 +43,12 @@ Throughout the course, we have three goals in mind:
 This course will not cover everything data science related. In fact, it will only give you a glimpse into the world of data science. However, hopefully it will give you the knowledge you need to pursue more knowledge. You see, data science is a highly cross-disciplinary field, and we need people with different competences. To illustrate, look at the figure below. Many would agree that data science is some sort of cross-over between computer science, statistics and domain expertise. Often, this means building high-end knowledge in one of the circles, and knowing enough about the other circles to be able to work in team-based contexts to draw on each other's specialties. Being able to understand, translate and work cross-disciplinary is an incredibly useful skill.
 
 \begin{figure}
-\includegraphics[width=0.5\linewidth]{figures/datascience_figure} \caption{The cross-disciplinary nature of data science}\label{fig:pressure}
+
+{\centering \includegraphics[width=0.5\linewidth]{figures/datascience_figure} 
+
+}
+
+\caption{The cross-disciplinary nature of data science}\label{fig:pressure}
 \end{figure}
 
 So, what do we mean by the different points above? Well, in short:
@@ -85,26 +94,34 @@ Here is a table over what we will cover in each week:
 | 4    | 20.jul | Wednesday | SSB      | 10:15-12:00 | Supervised learning: Regression                         |
 | 4    | 21.jul | Thursday  | SSB      | 10:15-12:00 | Supervised learning:   Classification                   |
 | 4    | 22.jul | Friday    | SSB      | 10:15-12:00 | Loss functions                                          |
-|      |        |           |          |             |                                                         |
-|      |        |           |          |             |                                                         |
 | 5    | 25.jul | Monday    | SSB      | 10:15-12:00 | Unsupervised learning                                   |
 | 5    | 26.jul | Tuesday   | SSB      | 10:15-12:00 | Text and machine learning                               |
 | 5    | 27.jul | Wednesday | SSB      | 10:15-12:00 | Deployment & iterative work                             |
 | 5    | 28.jul | Thursday  | SSB      | 10:15-12:00 | IT knowledge                                            |
-| 5    | 29.jul | Friday    | SSB      | 10:15-12:00 |                                                         |
-| 6    | 01.aug | Monday    | SSB      | 10:15-12:00 | Case                                                    |
-| 6    | 02.aug | Tuesday   | SSB      | 10:15-12:00 | Case                                                    |
-| 6    | 03.aug | Wednesday | SSB      | 10:15-12:00 | Case                                                    |
+| 5    | 29.jul | Friday    | SSB      | 10:15-12:00 | Open day                                                |
+| 6    | 01.aug | Monday    | SSB      | 10:15-12:00 | Case presentation                                       |
+| 6    | 02.aug | Tuesday   | SSB      | 10:15-12:00 | Case presentation                                       |
+| 6    | 03.aug | Wednesday | SSB      | 10:15-12:00 | Case presentation                                       |
 | 6    | 04.aug | Thursday  | SSB      | 10:15-12:00 | Final presentations                                     |
+
 
 
 ### What do we expect from you?
 
-You are expected to show up to every session we have
+**Attendance**: We would like you to show up to every session. Formally, you must attend a minimum of 75% of the lectures in order to take the final exam (i.e. participate in the presentations in the end and get a pass/fail assessment). 
+
+**Team work**: We expect that you work together with your team members on the problem statement. You can decide yourselves how you would like to work, but we recommend meeting physically at least two times a week for a session of 2-4 hours. This makes it easier to track progress and it often makes working more rewarding. It is also useful to set up a Teams, Slack or other communication channel. Keep in mind that you may be on different levels with regard to programming skills, and you may come from very different backgrounds. Try to utilize this rather than view it as a hindrance. We reward teams that work to make each other better - both in terms of programming skills and other skills.
+
+Most importantly, for this to feel like an exciting but safe learning space, we expect fun competitiveness and warm cooperativeness.
+
 
 ### How and why to work agile?
 
+
+
 ### The Belbin Strength test
+
+
 
 ### Links
 
