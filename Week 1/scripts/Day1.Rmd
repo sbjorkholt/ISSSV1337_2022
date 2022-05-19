@@ -8,6 +8,11 @@ output:
   github_document: default
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE)
+```
+
 Hello everyone!
 
 Welcome to Political Data Science Hackathon. We're thrilled to have you here with us, and we look forward to spending a great and interesting summer together.
@@ -42,7 +47,7 @@ That was a little bit about the structure. Now, about the content. Throughout th
 
 This course will not cover everything data science related. In fact, it will only give you a glimpse into the world of data science. However, hopefully it will give you the knowledge you need to pursue more knowledge. You see, data science is a highly cross-disciplinary field, and we need people with different competences. To illustrate, look at the figure below. Many would agree that data science is some sort of cross-over between computer science, statistics and domain expertise. Often, this means building high-end knowledge in one of the circles, and knowing enough about the other circles to be able to work in team-based contexts to draw on each other's specialties. Being able to understand, translate and work cross-disciplinary is an incredibly useful skill.
 
-![The cross-disciplinary nature of data science.](./scripts/figures/datascience_figure.png){width=20%}
+![.](./scripts/figures/datascience_figure.png){width=20%}
 
 So, what do we mean by the different points above? Well, in short:
 
@@ -62,10 +67,10 @@ So, what do we mean by the different points above? Well, in short:
 *3. Give an opportunity to learn and produce something work life related.*
 
 -   Work on a problem statement provided by work life organizations.
--   Get some examples on how data science can be used in work-life contexts.
+-   Get some examples on how data science can be used in work life contexts.
 
 
-Here is a table over what we will cover in each week:
+Here is a table that details more specifically what we will cover in each week (a more comprehensive table is in the [README](https://github.com/sbjorkholt/ISSSV1337)):
 
 | Week | Date   | Day       | Location | Time        | Topic                                                   |
 |------|--------|-----------|----------|-------------|---------------------------------------------------------|
@@ -99,17 +104,20 @@ Here is a table over what we will cover in each week:
 
 
 
-### What do we expect from you?
+### What do we need from you to make this happen?
 
 **Attendance**: We would like you to show up to every session. Formally, you must attend a minimum of 75% of the lectures in order to take the final exam (i.e. participate in the presentations in the end and get a pass/fail assessment). 
 
-**Team work**: We expect that you work together with your team members on the problem statement. You can decide yourselves how you would like to work, but we recommend meeting physically at least two times a week for a session of 2-4 hours. This makes it easier to track progress and it often makes working more rewarding. It is also useful to set up a Teams, Slack or other communication channel. Keep in mind that you may be on different levels with regard to programming skills, and you may come from very different backgrounds. Try to utilize this rather than view it as a hindrance. We reward teams that work to make each other better - both in terms of programming skills and other skills.
+**Team work**: We hope and expect that you work together with your team members on the problem statement. You can decide yourselves how you would like to work, but we recommend meeting physically at least two times a week for a session of 2-4 hours. This makes it easier to track progress and it often makes working more rewarding. It is also useful to set up a Teams, Slack or other communication channels. Keep in mind that you may be on different levels with regard to programming skills, and you may come from very different backgrounds. Try to utilize this rather than view it as a hindrance. We reward teams that work to make each other better - both in terms of programming skills and other skills.
 
-Most importantly, for this to feel like an exciting but safe learning space, we expect fun competitiveness and warm cooperativeness.
+In short, for this to feel like an exciting but safe learning space, we need fun competitiveness and warm cooperativeness :)
 
 
 ### How and why to work agile?
 
+Agile work involves (1) breaking a task up into smaller parts, (2) work on each part in several phases, (3) review the process and learn from feedback, and (4) doing it all over again.
+
+3. DoD. Definition of Done.
 
 
 ### The Belbin Strength test
