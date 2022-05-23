@@ -227,7 +227,7 @@ class(FALSE)
 
 ## Logical operators
 
-At last, I leave this here because it might be useful later.
+At last, we can use different operators to check whether to objects are equal to each other. We wil not delve into this now, but I leave this here because it might be useful later.
 
 | Operator |        Meaning        |
 |----------|:---------------------:|
@@ -244,7 +244,7 @@ At last, I leave this here because it might be useful later.
 
 # Calling functions
 
-As you can see, we can use R as a calculator if we want to. Writing `1+1` gives `2` in the Console. But the real power of R comes from running functions. A function is a command that tells R what to with something. We've already seen a few functions so far, for example `print()`, `mean()` and `class()`. `print()` tells R to give us the output of an object, `mean()` tells R to calculate the average of an object, and `class()` tells R to give us the data type of an object. 
+As you can see, we can use R as a calculator if we want to. Writing `1+1` gives `2` in the Console. But the real power of R comes from running functions. A function is a command that tells R what to do with something. We've already seen a few functions so far, for example `print()`, `mean()` and `class()`. `print()` tells R to give us the output of an object, `mean()` tells R to calculate the average of an object, and `class()` tells R to give us the data type of an object. 
 
 Learning functions is a bit like learning vocabulary in a language, so don't fret if you find yourself grasping for the name of a function. It's the same as when you somewhat know a language and can't really recall a word. The solution? Ask someone or look it up on the internet. 
 
@@ -254,6 +254,7 @@ Learning functions is a bit like learning vocabulary in a language, so don't fre
 Most functions we get from packages. Packages are bundles of functions that we import to R, and they are made by the wide community of people out there who work on R-content. For example, `stringr` is a package that gives us a lot of functions we can use to work with strings (i.e. character things). Some of these functions are `str_to_lower()`, which make all characters into lower case, `str_repalce`, which takes part of a string and replaces it with something else, and `sub_str()`, which takes out a part of a string. 
 
 ![](./figures/packages.png){width=80%}
+
 To get a package into R, we first have to install it (from the world wide web), then import it (telling R that we want to use it in this script).
 
 To install a package, use the function `install.packages()` and put the name of the package in quotation marks. You only need to do this *once* (unless you uninstall and reinstall R, or want to update your packages to newer versions). So no need to populate your script with `install.packages()`. 
@@ -270,7 +271,7 @@ To import a package, use the function `library()`. Here, you do not need quotati
 library(stringr)
 ```
 
-Once this is in order, we can start using function from the package `stringr`. A full overview of all the functions in a package is available on the internet through a document that all package-makers have to make for their package. In the case of `stringr`, a quick internet search leads us to [this document](https://cran.r-project.org/web/packages/stringr/stringr.pdf).
+Once this is in order, we can start using functions from the package `stringr`. A full overview of all the functions in a package is available on the internet through a document that all package-makers have to make for their package. In the case of `stringr`, a quick internet search leads us to [this document](https://cran.r-project.org/web/packages/stringr/stringr.pdf).
 
 Let's try some of the functions!
 
@@ -334,7 +335,7 @@ make_lower_and_pick_start(string)
 
 ### Installing LaTex
 
-We're going to write in RMarkdown. We need LaTex to make RMarkdown reports in PDF, so we need to install this as well.
+Now that we know how to work with packages, let's tackle the fact that we're going to write in RMarkdown. The great thing about R Markdown is that we can produce nice reports, for example in PDF. However, we need LaTex to make R Markdown reports in PDF, so we need to install this as well.
 
 LaTex is a document preparation system, much like word, except it is more code-heavy and allows you to create beautiful documents. TinyTex is a custom LaTeX distribution, so this is what we'll install. See <https://yihui.org/tinytex/> for more informaton.
 
@@ -348,5 +349,158 @@ install_tinytex()
 ```
 
 
-# Introduction to RMarkdown and Jupyter Notebooks
+# Introduction to R Markdown (and Jupyter Notebooks)
 
+R Markdown is a type of script that contains both text and code, and that can be turned into both documents and web pages. It's very handy in that regard. To open an R Markdown file in RStudio, click "File", "New file" and "R Markdown". Or, alternatively, click the document sign on the top left corner of your RStudio interface and choose "R Markdown". You'll get a box asking you for the title of your document. Call it whatever you like, then hit OK. 
+
+For those curious: R Markdown is a way to integrate writing in Markdown through R. Markdown is a markup language which, guess what, is also a type of computer language! In other words, we use it to speak with the computer, telling the computer the different properties of our text, be it a title, **bold**, *italics* or `code`. However, in contrast to for example R, python and Java, markup languages are much easier to read by humans. Other examples of markup languages are HTML and XML. This is not super important to know in order to write in R Markdown, but it's nice with a bit of context now and then.
+
+Now, your RStudio interface should look something like the picture below. Notice the "Knit" button at the top, and try clicking it. It will prompt a request to save your file on your computer, and once you've done that, the R Markdown will convert your code into a nice HTML report^[HTML is the language of the web. Most webpages are written in HTML.] Navigate to where you saved your file, click on the name of the file with the ".html" ending, and open it in an internet browser (such as Firefox or Chrome). 
+
+![](./figures/rmarkdown_2.png){width=80%}
+
+To modify the report, here are a few things to know:
+
+ - In the beginning of the document, the `knitr::opts_chuck$set(echo = FALSE)` tells R to use the `opts_chuck` function from the `knitr` package, and to modify the object set. In here, you can modify what you want the general settings of the document to be. `echo = FALSE` means that you do not want code to show typically, just the output of it. Other options are for example `include` (whether to typically include chunks) and `warnings` (whether to typically show warning messages from code). 
+
+To add a chuck of code, add the hyphens, curly parentheses and the r, and end with three curly parentheses as well. In the middle, write your code.
+ 
+` ```{r} `
+
+` ``` `
+
+For more settings, consult the image below, also available [here](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf), and search around on the internet whenever you wonder about something. The best way to learn is to just start and look up things as you need them. 
+
+![](./figures/rmarkdown-cheatsheet.pdf){width=100%}
+
+
+# Paths and folders
+
+Your computer stores everything you work with in folders (also called "directories"). If you open File Explorer on Windows or Finder App on Mac, you'll see the archive that your computer is storing for you. The archive has an arrangement which makes it easy to search through your files -- a tree-like structure. You have a folder, and within that folder you can have another folder, and within that folder, another folder, until there is a file. This tree-structure, from root to branch, is often called a "path". For example, the path to your "myscript.R" could look something like the structure below:
+
+![](./figures/rfolders.png){width=100%}
+Here, C-disk is the root and the file is myscript.R. The path would be: C-disk/Users/School/R-things/myscript.R
+
+This is important, because as with any archive, you need to know where you save things. It's also very important because when we import things into R, for example a dataset, you need to tell the computer where to find the file with that dataset. We do that by specifying the path to the file. For example, if we would want to read data.csv into R, the code would be:
+
+
+```r
+dataset <- read_csv("C-disk/Users/School/R-things/data.csv")
+```
+
+Notice that in the code above, `read_csv` is the function that reads a dataset into R, the argument is the path to the file, and we assign the dataset to an object called "dataset" by the `dataset <-` part. 
+
+Also, notice the suffix on the files. They indicate the type of file we have. Some examples of file types include:
+
+ - `.R` = Rscript
+ - `.Rmd` = R Markdown script
+ - `.Rdata` = sata in R-format
+ - `.RDS` = a better data format for R
+ - `.py` = python scripts
+ - `.doc` = Word-file
+ - `.csv` = spreadsheet file (data exchange)
+ - `.xlsx` = spreadsheet file especially for excel
+ - `.txt` = pure text file (notepad)
+ - `.json` = JSON-file (data exchange, especially good for nested data)
+ - `.html` = html file (data exchange or webpages)
+
+In RStudio, the window in the right hand corner mirrors the folders on your computer under the tab "Files". You can make adjustments here just as you can in your folder structure. 
+
+
+# Github
+
+We're going to work in Github. This is a version control space, meaning that it's a place where you can share your code with others and keep track of who changes what, when, how, and whether it was a change that we would really want to keep. It enables you to share your code with the world, and can be an excellent way to build your CV. Moreover, if you want to get up and serious with your project, you can integrate Github with many other platforms such as Amazon and Google Cloud, creating fluent pipelines for you work. So, there are at least three main benefits to Github:
+
+ - It makes collaboration easier.
+ - It gives your work exposure and publicity.
+ - It can be an important component in integration with other platforms. 
+ 
+To work in Github, we need to first create a user account. Then, your team needs to create a repository that can be shared among you. A repository is a bit like a folder on Github. 
+
+### Create a user account for Github
+
+1. Open https://github.com in a web browser, and then select Sign up.
+2. Enter your email address.
+3. Create a password for your new GitHub account, and Enter a username, too. Next, choose whether you want to receive updates and announcements via email, and then select Continue.
+4. Verify your account by solving a puzzle. Select the Start Puzzle button to do so, and then follow the prompts.
+5. After you verify your account, select the Create account button.
+6. Next, GitHub sends a launch code to your email address. Type that launch code in the Enter code dialog, and then press Enter.
+7. GitHub asks you some questions to help tailor your experience. Choose the answers that apply to you in the following dialogs:
+ - How many team members will be working with you?
+ - What specific features are you interested in using?
+8. On the "Where teams collaborate and ship" screen, you can choose whether you want to use the Free account or the Team account. To choose the Free account, select the Skip personalization button.
+9. GitHub opens a personalized page in your browser.
+
+### Create a repository
+
+1. Click on your profile button in the right hand corner of your Github screen and choose "Your repositories".
+2. Click the green button "New". 
+3. Type a short, memorable name for your repository.
+4. Optionally, add a description of your repository.
+5. Choose a repository visibility. Here, you can pick "Public".
+6. Under "Initialize this repository with", choose "Add a README file".
+7. Click "Create repository".
+
+Now, to add collaborators:
+
+1. Collect the Github usernames for the rest of the team.
+2. Navigate to the main page of the repository.
+3. Under your repository name, click Settings.
+4. In the "Access" section of the sidebar, click "Collaborators".
+5. Click "Add people".
+
+Once the other collaborators have accepted the invitation to collaborate, everyone should be able to contribute.
+
+Now, even though we have a shared Github repository, we still work and code in peace on our own computers. But whenever we make a change in the code and think it's time to share it with the rest of the team (for example because we need feedback or because we believe a piece of code to be done), we can choose to (1) add the change to the Github repository, (2) commit to the change and (3) push the change. This is the general flow of working with Github. 
+
+How do we add, commit and push a change from our local computer to the Github repository? By cloning the repository to our computer. This is possible to do in the terminal, but we will here show you how to do it in RStudio.
+
+## Github and RStudio 
+
+Github can work with many platforms, including RStudio! To get there, however, the first thing we need to do is to install git, the system that allows us to work with Github from our computer. So Github is the version control **space**, and git is the version control **system**. Git can be downloaded from here: http://git-scm.com/downloads
+
+Once you've installed git, you'll need to activate it in RStudio:
+
+1. Find the Tools menu in the top of the RStudio interface and go to Global Options.
+2. Click Git/SVN.
+3. Click Enable version control interface for RStudio projects.
+4. Under "Git executable", if there is no path there, enter the path for your the git file that you downloaded earlier.
+
+![](./figures/git1.png){width=80%}
+![](./figures/git2.png){width=80%}
+![](./figures/git3.png){width=80%}
+
+When this is up and working, we need to use our newly installed git to do the actual cloning the Github repository to our own computer. To do this, you need to create a new project in RStudio that is tied to the repository. This is how to do that:
+
+1. Under "File" in the upper left hand corner of your RStudio, choose "New project". Alteratively, click on the icon of an R in a box with a green plus sign. 
+
+![](./figures/project1.png){width=80%}
+
+2. Choose "Version Control".
+
+![](./figures/project2.png){width=80%}
+
+3. Choose "Git".
+
+![](./figures/project3.png){width=80%}
+
+4. Here, you are asked for the Repository URL. To find that, go back to the main page in your Repository in Github, and click on the green "Code" button. Copy the URL-path shown there. Then, paste it into the space for your Repository URL in RStudio.
+
+![](./figures/project4.png){width=80%}
+![](./figures/project5.png){width=80%}
+
+5. Use the "Browse" button to choose where on your computer you want to place your folder. It should be a place you can easily find again. And it should not be under "Downloads". Recall that a Repository in Github is kind of like a folder, so when you clone the repository like this, you will create a folder on your computer that matches the folder on Github.
+
+And now, you've successfully cloned the Github repository to your own computer. In the upper right hand corner of your Rstudio, there is now a tab called "Git". Moreover, in the bottom right hand corner, under "Files", you find the folder on your computer which matches the Github repository. 
+
+![](./figures/project6.png){width=80%}
+
+To get the latest updates from your repository, click "Pull". Make it a habit to click "Pull" regularly. It will spare you the pain of so-called "merge conflicts". If you want to add your code to the common repository:
+
+ 1. Click "Pull". 
+ 2. Click "Commit".
+ 3. Add a description of what you've done and why.
+ 4. Click "Push".
+
+
+Some of you, if not all, will almost certainly get trouble with Github during this course. We will deal with them as they arise. Since this is a learning space which increases the risk of errors, we also recommend keeping a backup of your repository. This can seem cumbersome, but it's a part of the learning process. In the end, working with Github will prove vastly superior to many alternatives, such as sending code over mail.

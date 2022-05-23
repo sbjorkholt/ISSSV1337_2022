@@ -3,3 +3,4 @@ setwd("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSS
 
 rmarkdown::render('Day1.Rmd', output_dir = "../.")
 rmarkdown::render('Day2.Rmd', output_dir = "../.")
+rmarkdown::render('Day 2 - attachment.Rmd', output_dir = "../.")

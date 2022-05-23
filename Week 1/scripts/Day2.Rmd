@@ -472,6 +472,5 @@ To get the latest updates from your repository, click "Pull". Make it a habit to
  3. Add a description of what you've done and why.
  4. Click "Push".
 
-![](./figures/githubcommandsrstudio.mp4){width="90%"}
 
 Some of you, if not all, will almost certainly get trouble with Github during this course. We will deal with them as they arise. Since this is a learning space which increases the risk of errors, we also recommend keeping a backup of your repository. This can seem cumbersome, but it's a part of the learning process. In the end, working with Github will prove vastly superior to many alternatives, such as sending code over mail.
