@@ -1,0 +1,13 @@
+---
+title: "Day2-attachment"
+subtitle: "Github flow in RStudio"
+author: "Solveig Bjørkholt"
+date: "`r Sys.Date()`"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![](./scripts/figures/githubcommandsrstudio_NTkmdYdE.mp4){width="100%"}

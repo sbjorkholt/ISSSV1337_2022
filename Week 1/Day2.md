@@ -271,6 +271,10 @@ To import a package, use the function `library()`. Here, you do not need quotati
 library(stringr)
 ```
 
+```
+## Warning: package 'stringr' was built under R version 4.1.3
+```
+
 Once this is in order, we can start using functions from the package `stringr`. A full overview of all the functions in a package is available on the internet through a document that all package-makers have to make for their package. In the case of `stringr`, a quick internet search leads us to [this document](https://cran.r-project.org/web/packages/stringr/stringr.pdf).
 
 Let's try some of the functions!
@@ -467,7 +471,9 @@ Once you've installed git, you'll need to activate it in RStudio:
 4. Under "Git executable", if there is no path there, enter the path for your the git file that you downloaded earlier.
 
 ![](./figures/git1.png){width=80%}
+
 ![](./figures/git2.png){width=80%}
+
 ![](./figures/git3.png){width=80%}
 
 When this is up and working, we need to use our newly installed git to do the actual cloning the Github repository to our own computer. To do this, you need to create a new project in RStudio that is tied to the repository. This is how to do that:
@@ -487,6 +493,7 @@ When this is up and working, we need to use our newly installed git to do the ac
 4. Here, you are asked for the Repository URL. To find that, go back to the main page in your Repository in Github, and click on the green "Code" button. Copy the URL-path shown there. Then, paste it into the space for your Repository URL in RStudio.
 
 ![](./figures/project4.png){width=80%}
+
 ![](./figures/project5.png){width=80%}
 
 5. Use the "Browse" button to choose where on your computer you want to place your folder. It should be a place you can easily find again. And it should not be under "Downloads". Recall that a Repository in Github is kind of like a folder, so when you clone the repository like this, you will create a folder on your computer that matches the folder on Github.
@@ -502,5 +509,6 @@ To get the latest updates from your repository, click "Pull". Make it a habit to
  3. Add a description of what you've done and why.
  4. Click "Push".
 
+See the video on this page for a demonstration.
 
-Some of you, if not all, will almost certainly get trouble with Github during this course. We will deal with them as they arise. Since this is a learning space which increases the risk of errors, we also recommend keeping a backup of your repository. This can seem cumbersome, but it's a part of the learning process. In the end, working with Github will prove vastly superior to many alternatives, such as sending code over mail.
+Some of you, if not all, will almost certainly get trouble with Github during this course. We will deal with them as they arise. Since this is a learning space which increases the risk of errors, we also recommend keeping a backup of your repository. This can seem cumbersome, but it's a part of the learning process. In the end, working with Github will prove vastly superiour to many alternatives, such as sending code over mail.
