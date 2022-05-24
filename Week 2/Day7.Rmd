@@ -11,14 +11,18 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
 ```
 
 # Plan for today
 
 ## What we will learn today:
 
-- Languages of the web
-- Using `rvest`
+- Why use the internet for data gathering?
+- HTML - what is it and how does it work?
+- Other internet languages
+- Using `rvest` to extract text, tables and links
+- Considerations when webscraping
 
 ## What we will do today:
 
@@ -99,7 +103,7 @@ Let's have a small look at how HTML works in practice. We can write our own HTML
 1. Open notepad on your computer.
 2. Write the following code:
 
-```{r, eval = FALSE}
+```{html, eval = FALSE}
 <html>
     <head>
         <title>mypage</title>
@@ -126,10 +130,20 @@ Other web languages are usually not terribly important for webscraping, but beca
 
 When a webpage uses CSS and Javascript (as most modern webpages do to some extent), we can see this in the HTML code as a reference to an external document. The `<head>` node is often a parent of these references -- references which nodes could be for example `<script>`, `<link>` or `<style>`. 
 
-In the image below, the webpage uses the css-file "main.css" and the javascript-file "jquery.js". 
+In the illustration below, the webpage uses the css-file "main.css" and the javascript-file "jquery.js". 
 
-```{r, out.width="80%", echo = FALSE}
-knitr::include_graphics("./figures/reftojsandcss.png")
+```{html, eval = FALSE}
+
+<html>
+  <head>
+    <links href = "/styles/main.css">
+  </head>
+  <body>
+    <h1>My page!</h1>
+    <script src = "/js/jquery.js">
+  </body>
+</html>
+
 ```
 
 
@@ -158,7 +172,7 @@ There are many packages one can use to conduct webscraping in R. In this course,
 
 Some of the most important functions in the `rvest` package is:
 
-```{rm eval = FALSE}
+```{r eval = FALSE}
 read_html(url) # Scrape HTML-content from the webpage
 
 html_elements() # Identify elements in the HTML-code.
@@ -178,16 +192,164 @@ html_table() # Make HTML-tables into dataframes.
 html_text() # Strip HTML-nodes and extract only the text (html_text2() is, in some regards, an improvement upon this).
 ```
 
+Which function you use depends partly on the structure of the webpage, and partly on which part of the webpage you want to extract. Below are some examples on how to extract text, tables and links. We'll use a Wikipedia article on oranges for the sake of illustration. The general method is:
+
+1. Use `read_html` and place as an argument the name of the webpage that you want to extract.
+2. Inspect the webpage and find the node to the section you want to extract information from.
+3. Right-click on the HTML-structure and choose "copy selector".
+4. Specify the node in `html_node` by pasting in what you copied in the previous step.
+5. Choose function depending on what you want to extract, for example `html_text` if you want the text.
+
 ## Extract text
 
+Say we want the introduction on the Wikipedia-site about oranges (the fruit). If we use `read_html`, we call on the server to get to the webpage we use. It will give us the complete HTML-code, with `<html>`, `<head>`, `<body>` and everything. But first, of course, we need to load the package `rvest` into R. 
+
+```{r, warning=FALSE, error=FALSE, message=FALSE}
+
+library(rvest)
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") 
+
+```
+
+So, say that the part of the information about oranges that is indicated in a red box in the picture.
+
+```{r, out.width="80%", echo = FALSE}
+knitr::include_graphics("./figures/oranges1.png")
+```
+
+To extract this part, we need to find the node. Direct your mouse to the paragraph, right-click on it and choose "Inspect". Here we go, the node containing this paragraph is a `<p>` node. To get the complete path of this node:
+
+1. Right-click on the node.
+2. Choose "Copy".
+3. Choose "Copy selector".
+
+```{r, out.width="80%", echo = FALSE}
+knitr::include_graphics("./figures/oranges2.png")
+```
+
+Now, add to the code above `html_node` and paste in the thing you copied above. This gives us lots of children of our node. 
+
+```{r}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)")
+
+```
+
+To extract the text, add `html_text` to the pipeline. 
+
+```{r}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
+  html_text()
+
+```
+
+If you find your `html_text` picking up a lot of special characters and/or whitespace, try with `html_text2` instead. It's a new thing the `rvest` package makers introduced not so long ago. 
+
+```{r}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
+  html_text2()
+
+```
 
 
 ## Extract tables
 
+Extracting text tends to be fairly easy. Tables can be a bit trickier, but many of them are quite straight forward as well. Often, tables are shown in the HTML-code with the tags `<table>` and `<tbody>`. If we scroll down on the Wikipedia-page about oranges, we find a table containing information on the nutrition of oranges.
 
+```{r, out.width="80%", echo = FALSE}
+knitr::include_graphics("./figures/oranges3.png")
+```
+
+To scrape this table, do the same as you did before. 
+
+1. Add the webpage URL to the `read_html`.
+2. Right-click and choose inspect on the part of the webpage you want to scrape.
+3. Hover over the HTML-code to find which part refers to the area you want to scrape.
+4. Right-click on this part and choose Copy, then Copy selector. 
+5. Paste this into the `html_node` part.
+
+Last, instead of adding `html_text`, we now use `html_table`. This parses the code into an R dataframe.
+
+```{r}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
+  html_table()
+
+```
+
+Usually, you have to do a bit of extra work with the table after having extracted it, for example because there are empty cells, as in this case. This often requires a bit of data manipulation and string manipulation. We will be working more with strings and text in week 3. 
+
+```{r}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
+  html_table() %>%
+  na_if("") %>% # Replaces "" with NA
+  na.omit() # Removes all NA
+
+```
 
 ## Extract links
 
+Out of tables and text, another thing that is common to want from a webpage is links. This is particularly so because you can use the links to **crawl**. When you do web crawling, you start on one webpage, then find the links you deem important, extract them, and use those links in another `read_html` to enter a new webpage and scrape content.
+
+To scrape links, recall that the node `<a>` refers to hyperlinks, and `<href>` refers to other webpages. Let's go back to the initial text on the webpage. This chunk of text contained a lot of hyperlinks. If we want to extract them, add `html_elements` with the argument `"a"` to get the hyperlink references. To extract the link from these nodes, use `html_attr` with the argument `"href"`. 
+
+```{r eval = FALSE}
+
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
+  html_elements("a") %>%
+  html_attr("href")
+
+```
+
+What we get here is the links to other webpages and links to references (notes) at the bottom of the Wikipedia page. Again, say we wanted only the links that refer to external webpages (not references) -- how would we go about extracting only those? Once again, we need to use data and string manipulation. 
+
+```{r}
+
+links <- read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+  html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
+  html_elements("a") %>%
+  html_attr("href") %>%
+  str_extract("/wiki.*") %>% # Gathers only the strings that start with "/wiki", then followed by anything (.*)
+  na.omit() %>% # All other string become NA, we remove these
+  str_c("https://en.wikipedia.org/", .) # str_c pastes together two strings, we do this in order to get the full webpage
+
+```
+
+We could use these links in a loop. Under, I show an example with a for-loop where I extract the text from each page and add it to a list-element.
+
+```{r}
+
+info <- list() # Make a list-object where you can put the output from the loop
+
+for (i in 1:length(links)) { # For each i in every element from place number one to the last place in links (given by length(links))
+  
+  page <- read_html(links[[i]]) # Read the html-page for each i
+  
+  page <- page %>% # Use this page
+    html_elements("p") %>% # And fetch the paragraph elements
+    html_text() # Then extract the text from these elements
+  
+  info[[i]] <- page # Place the text for each link into its respective place in the info-object
+  
+}
+
+# An example of what the info-object contains:
+
+info[[1]][3]
+info[[2]][3]
+info[[3]][2]
+
+```
 
 
 # Considerations when webscraping
