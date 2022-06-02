@@ -103,9 +103,9 @@ We'll be looking at how to make some of these plots in R. A useful thumb of rule
  - **Boxplot**: One categorical variable and one continuous variable.
 
 
-# Visualization with `ggplot`
+# Visualization with `ggplot2`
 
-`ggplot` is the go-to package to work with plots in R. You can create almost any plot with this package, from the most simple ones to very advanced plots.
+`ggplot2` is the go-to package to work with plots in R^[Even though the name of the package is `ggplot2`, I refer to it sometimes as just `ggplot`]. You can create almost any plot with this package, from the most simple ones to very advanced plots.
 
 
 ## The `ggplot` philosophy
@@ -117,6 +117,8 @@ The first layer is the empty canvas. It looks like a blank slate where anything 
 
 
 ```r
+library(ggplot2)
+
 gapminder::gapminder %>%
   ggplot()
 ```
@@ -652,6 +654,33 @@ green_research %>%
 ```
 
 ![](Day9_files/figure-latex/unnamed-chunk-30-1.pdf)<!-- --> 
+
+Should you want several plots side by side, one option is to use `gridExtra`. Another option is `cowplot`.
+
+
+```r
+library(gridExtra)
+
+plot1 <- gapminder::gapminder %>%
+  ggplot(aes(lifeExp)) +
+  geom_histogram()
+
+plot2 <- green_research %>%
+  ggplot(aes(geo, GHG)) +
+  geom_bar(stat = "identity")
+
+plot3 <- green_research %>%
+  ggplot(aes(GHG, rnd)) + 
+  geom_point()
+
+plot4 <- green_research %>%
+  ggplot(aes(geo, GHG)) +
+  geom_boxplot()
+
+grid.arrange(plot1, plot2, plot3, plot4)
+```
+
+![](Day9_files/figure-latex/unnamed-chunk-31-1.pdf)<!-- --> 
 
 
 

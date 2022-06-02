@@ -657,5 +657,31 @@ green_research %>%
 
 ```
 
+Should you want several plots side by side, one option is to use `gridExtra`. Another option is `cowplot`.
+
+```{r}
+
+library(gridExtra)
+
+plot1 <- gapminder::gapminder %>%
+  ggplot(aes(lifeExp)) +
+  geom_histogram()
+
+plot2 <- green_research %>%
+  ggplot(aes(geo, GHG)) +
+  geom_bar(stat = "identity")
+
+plot3 <- green_research %>%
+  ggplot(aes(GHG, rnd)) + 
+  geom_point()
+
+plot4 <- green_research %>%
+  ggplot(aes(geo, GHG)) +
+  geom_boxplot()
+
+grid.arrange(plot1, plot2, plot3, plot4)
+
+```
+
 
 
