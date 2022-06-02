@@ -1,0 +1,57 @@
+---
+title: "Day 10"
+author: "Solveig Bjørkholt"
+date: '10. June'
+output:
+  html_document:
+    keep_md: yes
+  #pdf_document: 
+  #  keep_md: yes
+  #  extra_dependencies: ["float"]
+  github_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, warning = FALSE, message=FALSE)
+library(tidyverse)
+```
+
+# Plan for today
+
+## What we will learn today:
+
+- How to visualize data with `plotly`
+- Interactive graphs
+- Rmarkdown configurations
+- Making a dashboard through R markdown with `flexdashboard`
+
+## What we will do today:
+
+- Practical tasks
+- Make graphs for the problem statement
+
+
+# Using `plotly`
+
+So maybe you've just got the hang of visualizing data with `ggplot2`. You've started creating some pretty awesome graphs and perhaps even started to get some preferences regarding background or colors. Moreover, because of the wide use and support, you can look up almost anything on the internet, and new features are being developed all the time. With all these benefits, why start learning another data visualization package at all?
+
+In all due honesty, the packages are very similar in terms of speed, user friendliness and customization tools, but `plotly` has one advantage over `ggplot`. `plotly` can create interactive graphs. This makes the package great for website development, even if you're just creating a simple dashboard. If you're working in a team with others, `plotly` can also be handy because it's simpler integrate with other programming languages such as Javascript and Python.
+
+Let's compare the use of `ggplot2` and `plotly` on making our very simple histogram from the gapminder dataset. As you can see, the syntax is slightly different, but the main components remain. In both syntaxes, you have to specify (1) what your dataset is, (2) which variable(s) you are plotting and (3) what kind of plot you are making. 
+
+```{r}
+
+library(ggplot2)
+library(plotly)
+
+gapminder <- gapminder::gapminder
+
+gapminder %>%
+  ggplot(aes(lifeExp)) +
+  geom_histogram()
+
+gapminder %>%
+  plot_ly(x = ~lifeExp, 
+          type = "histogram")
+
+```
