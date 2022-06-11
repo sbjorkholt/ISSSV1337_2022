@@ -34,16 +34,16 @@ Ah, the internet. A giant web of information, spanning space in unprecedented wa
 
 \includegraphics[width=0.5\linewidth]{./figures/internet} 
 
-The internet is a great source of information. It's unfortunately also one of those examples where lots and lots of data makes it difficult to extract knowledge. Also, it can promote many manual processes where we sit and read webpage upon webpage, copy-paste tables or simply leave the information unused because manually processing it would take way too long. This is one reason why we have webscraping.
+The internet is a great source of information. It's unfortunately also not the most accessible data always, and the more data you have, the more difficult it can be to extract knowledge. Relying on webpages as a source of information can produce many manual processes where we sit and read webpage upon webpage, copy-paste tables or simply leave the information unused because manually processing it would take way too long. This is one reason why we have webscraping. Webscraping is basically the going into a webpage, copying the content you need and pasting it into a document at your own computer -- except we let the computer do this labor instead of humans. 
 
-So what is a webpage? Take Wikipedia. https://en.wikipedia.org . Wikipedia is a webpage -- an HTML document with lots of links to other HTML-documents. Most webpages are written in HTML, which stands for Hyper Text Markup Language. However, most of them also have so CSS (to make them beautiful) and Javascript (to make them exciting). We will come back to this. 
+So what is a webpage? A webpage is a collection of information written in HTML that typically links to other webpages. Take Wikipedia for example. https://en.wikipedia.org . Wikipedia is a webpage -- an HTML document with lots of links to other HTML-documents. Most webpages are written in HTML, which stands for Hyper Text Markup Language. Information that is accessible in HTML is semi-structured. Most webpages also have some CSS (to make them beautiful) and Javascript (to make them exciting). We will come briefly back to these two other languages below. 
 
-A webpage is always hosted on a server. This means somebody has the job of being the *host* of a server and maintain the daily functionality. You can choose to host your own server, you can even choose to use your own computer as a server. Yet, most often when making and publishing webpages, people choose to rent space on other people's (and companies') servers. You can for example host your webpage in the cloud, using service providers such as Google, Amazon, or even RStudio. 
+A webpage is always hosted on a server. This means somebody has the job of being the *host* of a server and maintain the daily functionality. You can think of servers as big computers, and in fact, you can choose to host webpages on your own server if you buy one. You can even choose to use your own computer as a server. Yet, most often when making and publishing webpages, people choose to rent space on other people's (and companies') servers. You can for example host your webpage in the cloud, using service providers such as Google, Amazon, or even RStudio. 
 
 Between the server and the webpage, you have the browser. This could be for example Firefox, Opera, Google Chrome or Internet Explorer. The browser interprets the information on the webpage so that it becomes human-readable. 
 
 
-\includegraphics[width=0.5\linewidth]{./figures/webpage_structure} 
+\includegraphics[width=1\linewidth]{./figures/webpage_structure} 
 
 Webpage developers often talk about "frontend" and "backend" in a webpage.
 
@@ -54,29 +54,29 @@ We're going to focus on the frontend-part today, since this is where we find the
 
 ## Find the HTML code
 
-The HTML of any webpage is wide open for anyone to view. Want to see how a webpage has been made? Open any webpage, for example https://en.wikipedia.org/. Right click on the page and choose "Inspect". On the right hand side you will see a pane with all the code that is used to build this particular webpage. If you hover over a part of it, you'll see which part of the webpage this particular HTML-code relates to. 
+The HTML of any webpage is wide open for anyone to view. Want to see how a webpage has been made? Open any webpage, for example https://en.wikipedia.org/. Right click on the page and choose "Inspect". On the right hand side you will see a pane with all the code that is used to build this particular webpage. If you hover over a part of it, you'll see which part of the webpage this particular HTML-code relates to. In the example below, I opened Wikipedia on a random day and it had an article about turtles. 
 
 
-\includegraphics[width=0.5\linewidth]{./figures/wikipedia} 
+\includegraphics[width=1\linewidth]{./figures/wikipedia} 
 
 ## HTML
 
-HTML-code is hierarchical. It always starts with the element `<html>`. In here, you can for example specify what the language will be. Next comes two parts; `<head>` and `<body>`. They contain the following:
+HTML-code is hierarchical. It always starts with the element `<html>`. In here, you can for example specify what the language will be -- English, Norwegian, Spanish, Chinese, etc. Next comes two parts; `<head>` and `<body>`. They contain the following:
 
  - `<head>` : Metadata about the file, for example title of the document (that is shown in the tab pane in your browser), a description of the document, imported resources for the document, and so on.
  - `<body>` : All the content that we can see on the webpage, for example text, pictures, figures, tables, etc.
 
-These parts are called "nodes". The start and ending of all nodes is visible in the document, for example `</head>` and `</html>`. 
+These parts are called "nodes". The start and ending of all nodes is visible in the document with a slash, for example `</head>` and `</html>`. 
 
 
-\includegraphics[width=0.5\linewidth]{./figures/wikipedia2} 
+\includegraphics[width=1\linewidth]{./figures/wikipedia2} 
 
 `<head>` and `<body>` are "children" of `<html>`. `<body>` is also a parent of several children, most often `<div>`. `<div>` specifies a division of the document. Hover over the different `<div>`s to see which divisions of the document they refer to.
 
 
 \includegraphics[width=0.5\linewidth]{./figures/wikipedia3} 
 
-It is not vital to know what all the nodes for webscraping, but here is a small overview of some of them:
+It is not vital to know what all the nodes mean to do webscraping, but it can be useful. Here is a small overview of some of them:
 
  - `<div>` : Division of the document 
  - `<section>` : Section of the document
@@ -119,9 +119,9 @@ Try to right click and Inspect your own webpage. That's the HTML code you just w
 
 ## Other languages
 
-Other web languages are usually not terribly important for webscraping, but because it's good to know to understand how things work, we will shortly introduce you to some of them never the less. 
+Other web languages are usually not terribly important for webscraping, but because it's good to understand how things work, we will shortly introduce you to some of them. 
 
-When a webpage uses CSS and Javascript (as most modern webpages do to some extent), we can see this in the HTML code as a reference to an external document. The `<head>` node is often a parent of these references -- references which nodes could be for example `<script>`, `<link>` or `<style>`. 
+When a webpage uses CSS and Javascript (as most modern webpages do), we can see this in the HTML code as a reference to an external document. The `<head>` node is often a parent of these references -- references which nodes could be for example `<script>`, `<link>` or `<style>`. 
 
 In the illustration below, the webpage uses the css-file "main.css" and the javascript-file "jquery.js". 
 
@@ -143,9 +143,9 @@ In the illustration below, the webpage uses the css-file "main.css" and the java
 
 ### CSS
 
-CSS stands for **Cascading Style Sheets** and is used to define the look on webpages beyond what HTML can do. It gives the developer more freedom to choose text sizes, fonts, colors, formats, and so on. CSS is the traditional languages, but some developers use other languages with a purpose of defining webpage looks, for example Sass.
+CSS stands for **Cascading Style Sheets** and is used to define the look on webpages beyond what HTML can do. It gives the developer more freedom to choose text sizes, fonts, colors, formats, and so on. CSS is the traditional language for beautifying webpages, but some developers use other languages, for example Sass.
 
-The difference can be quite significant. In the figure below, we see the same webpage with and without CSS.
+The difference between a webpage with and without some design language can be quite significant. In the figure below, we see the same webpage with and without CSS.
 
 
 \includegraphics[width=0.8\linewidth]{./figures/withandwithoutcss} 
@@ -161,7 +161,7 @@ Javascript is used to make interactive webpages, for example the possibility of 
 
 There are many packages one can use to conduct webscraping in R. In this course, we will be focusing on the webpage `rvest`. It is a part of the `tidyverse` and is widely used and supported. 
 
-Some of the most important functions in the `rvest` package is:
+Some of the most important functions in the `rvest` package are:
 
 
 ```r
@@ -192,6 +192,22 @@ Which function you use depends partly on the structure of the webpage, and partl
 4. Specify the node in `html_node` by pasting in what you copied in the previous step.
 5. Choose function depending on what you want to extract, for example `html_text` if you want the text.
 
+In addition, you should **make it a habit of downloading the webpage** to your own computer. This will help in many respects:
+
+1. It makes your work easier on the server since you can download the page once, and then use this.
+2. It makes your code reproducible, since even if the webpage changes, your local copy does not.
+3. It allows you to work with these files without internet.
+
+## Download the webpage
+
+To download a webpage, use the function `download.file`, and add as the first argument the link to the page you want to download, and then, the path to the folder of the computer where you want to place it, ending with the name of the file and `.html`.
+
+
+```r
+download.file("https://en.wikipedia.org/wiki/Orange_(fruit)", # Download one html-file after another into the folder specified in folder
+                destfile = "C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html")
+```
+
 ## Extract text
 
 Say we want the introduction on the Wikipedia-site about oranges (the fruit). If we use `read_html`, we call on the server to get to the webpage we use. It will give us the complete HTML-code, with `<html>`, `<head>`, `<body>` and everything. But first, of course, we need to load the package `rvest` into R. 
@@ -200,7 +216,18 @@ Say we want the introduction on the Wikipedia-site about oranges (the fruit). If
 ```r
 library(rvest)
 
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") 
+read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") # Read directly from webpage
+```
+
+```
+## {html_document}
+## <html class="client-nojs" lang="en" dir="ltr">
+## [1] <head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 ...
+## [2] <body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject  ...
+```
+
+```r
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") # Read from your downloaded file
 ```
 
 ```
@@ -213,7 +240,7 @@ read_html("https://en.wikipedia.org/wiki/Orange_(fruit)")
 So, say that the part of the information about oranges that is indicated in a red box in the picture.
 
 
-\includegraphics[width=0.8\linewidth]{./figures/oranges1} 
+\includegraphics[width=1\linewidth]{./figures/oranges1} 
 
 To extract this part, we need to find the node. Direct your mouse to the paragraph, right-click on it and choose "Inspect". Here we go, the node containing this paragraph is a `<p>` node. To get the complete path of this node:
 
@@ -222,13 +249,13 @@ To extract this part, we need to find the node. Direct your mouse to the paragra
 3. Choose "Copy selector".
 
 
-\includegraphics[width=0.8\linewidth]{./figures/oranges2} 
+\includegraphics[width=1\linewidth]{./figures/oranges2} 
 
 Now, add to the code above `html_node` and paste in the thing you copied above. This gives us lots of children of our node. 
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)")
 ```
 
@@ -258,7 +285,7 @@ To extract the text, add `html_text` to the pipeline.
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_text()
 ```
@@ -271,7 +298,7 @@ If you find your `html_text` picking up a lot of special characters and/or white
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_text2()
 ```
@@ -286,7 +313,7 @@ read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
 Extracting text tends to be fairly easy. Tables can be a bit trickier, but many of them are quite straight forward as well. Often, tables are shown in the HTML-code with the tags `<table>` and `<tbody>`. If we scroll down on the Wikipedia-page about oranges, we find a table containing information on the nutrition of oranges.
 
 
-\includegraphics[width=0.8\linewidth]{./figures/oranges3} 
+\includegraphics[width=1\linewidth]{./figures/oranges3} 
 
 To scrape this table, do the same as you did before. 
 
@@ -300,7 +327,7 @@ Last, instead of adding `html_text`, we now use `html_table`. This parses the co
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
   html_table()
 ```
@@ -326,7 +353,7 @@ Usually, you have to do a bit of extra work with the table after having extracte
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
   html_table() %>%
   na_if("") %>% # Replaces "" with NA
@@ -358,7 +385,7 @@ To scrape links, recall that the node `<a>` refers to hyperlinks, and `<href>` r
 
 
 ```r
-read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_elements("a") %>%
   html_attr("href")
@@ -368,7 +395,7 @@ What we get here is the links to other webpages and links to references (notes) 
 
 
 ```r
-links <- read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
+links <- read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_elements("a") %>%
   html_attr("href") %>%
@@ -378,6 +405,17 @@ links <- read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") %>%
 ```
 
 We could use these links in a loop. Under, I show an example with a for-loop where I extract the text from each page and add it to a list-element.
+
+
+```r
+linkstopic <- str_remove(links, "https://en.wikipedia.org//wiki/")
+
+for(i in 1:length(links)) { # For all the links...
+  
+  download.file(links[[i]], # Download one html-file after another into the folder specified in folder
+                destfile = str_c("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/", linkstopic[i], ".html"))
+}
+```
 
 
 ```r
@@ -417,7 +455,7 @@ info[[3]][2]
 ```
 
 ```
-## [1] "Family (Latin: familia, plural familiae) is one of the eight major hierarchical taxonomic ranks in Linnaean taxonomy; it is classified between order and genus. A family may be divided into subfamilies, which are intermediate ranks between the ranks of family and genus. The official family names are Latin in origin; however, popular names are often used: for example, walnut trees and hickory trees belong to the family Juglandaceae, but that family is commonly referred to as being the \"walnut family\".\n"
+## [1] "Family (Latin: familia, plural familiae) is one of the eight major hierarchical taxonomic ranks in Linnaean taxonomy. It is classified between order and genus. A family may be divided into subfamilies, which are intermediate ranks between the ranks of family and genus. The official family names are Latin in origin; however, popular names are often used: for example, walnut trees and hickory trees belong to the family Juglandaceae, but that family is commonly referred to as being the \"walnut family\".\n"
 ```
 
 
@@ -430,4 +468,4 @@ If you gather a lot of information from a webpage quickly and rapidly, it can ad
  - Scrape only what you actually need.
  - Check the robots.txt file to see which information the webpage provider thinks it's okay and not okay to scrape. You check this through webpage/robots.txt, for example wikipedia/robots.txt.
 
-
+Because webscraping can be pretty hard on your service provider, and because it can take some time to write webscraping scripts, it is useful to check whether the webpage you are scraping from provides an API for the data you're interested in. If that is so, you are in for an easier task. More about APIs tomorrow. 
