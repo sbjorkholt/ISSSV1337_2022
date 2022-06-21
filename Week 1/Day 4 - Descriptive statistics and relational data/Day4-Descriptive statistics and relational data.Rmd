@@ -11,6 +11,7 @@ output:
     keep_md: yes
     extra_dependencies: ["float"]
   github_document: default
+always_allow_html: true
 ---
 
 ```{r setup, include=FALSE}
