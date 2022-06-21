@@ -2,6 +2,9 @@
 
 Bookdown of course material: https://pages.github.uio.no/solvebjo/Political_Data_Science_Hackathon_2022/ 
 
+Example dashboard: https://sbjorkholt.github.io/ISSSV1337/Day10_dashboard.html
+
+
 | Week | Date   | Day       | Location | Time        | Topic                                                   |
 |------|--------|-----------|----------|-------------|---------------------------------------------------------|
 | 1    | 27.jun | Monday    | Blindern | 10:15-12:15 | Introduction to course                                  |
