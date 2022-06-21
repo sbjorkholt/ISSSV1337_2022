@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 1be0d9969f081b98370c6a9061dd448776ca09bb Solveig Bjørkholt <solvebjo@uio.no> 1652172211 +0200	clone: from https://github.com/sbjorkholt/ISSSV1337.git
+1be0d9969f081b98370c6a9061dd448776ca09bb e112a5256cdd0da94fabe620217f3151022c397b Solveig Bjørkholt <solvebjo@uio.no> 1652173378 +0200	commit: first commit
+e112a5256cdd0da94fabe620217f3151022c397b a454f3578ecd832e8439d56f70b21daf2056bd50 Solveig Bjørkholt <solvebjo@uio.no> 1652173542 +0200	commit: first commit
+a454f3578ecd832e8439d56f70b21daf2056bd50 dac18e7ebe23d39c82d3ec440a5b220585f5a6ea Solveig Bjørkholt <solvebjo@uio.no> 1652173705 +0200	commit: trying with html doc as well
+dac18e7ebe23d39c82d3ec440a5b220585f5a6ea 9a27b44c4ff3e3b34a23810ab39351f60079f92e Solveig Bjørkholt <solvebjo@uio.no> 1652173773 +0200	commit: first commit
+9a27b44c4ff3e3b34a23810ab39351f60079f92e d32a626483d6a58c7e71dbe732b5a3c5365b11f0 Solveig Bjørkholt <solvebjo@uio.no> 1652173917 +0200	commit: first commit
+d32a626483d6a58c7e71dbe732b5a3c5365b11f0 a0586230eeea48439b258cb68132704b3a18f8f3 Solveig Bjørkholt <solvebjo@uio.no> 1652174280 +0200	commit: with rendered files
+a0586230eeea48439b258cb68132704b3a18f8f3 505973ad12a017a824a173abcff4164a1b39f561 Solveig Bjørkholt <solvebjo@uio.no> 1652175748 +0200	commit: initial scripts
+505973ad12a017a824a173abcff4164a1b39f561 8e9582db048058da43dd63e10614d170ed92e43e Solveig Bjørkholt <solvebjo@uio.no> 1652175817 +0200	commit: initial scripts
+8e9582db048058da43dd63e10614d170ed92e43e 7b1b91dbc631692149e009cb84a2354d7fb04c5a Solveig Bjørkholt <solvebjo@uio.no> 1652272898 +0200	commit: schedule, day 1 and day 2
+7b1b91dbc631692149e009cb84a2354d7fb04c5a 1fbd74c1192521b8feacd56baf074a3f0d533e3b Solveig Bjørkholt <solvebjo@uio.no> 1652273023 +0200	commit: schedule, day 1 and day 2
+1fbd74c1192521b8feacd56baf074a3f0d533e3b 6612066a940022d5bae016bdbea5e86c830d9c22 Solveig Bjørkholt <solvebjo@uio.no> 1652273289 +0200	commit: added schedule
+6612066a940022d5bae016bdbea5e86c830d9c22 15f387d6319b629b861f0f5ffb205899bb6755bd Solveig Bjørkholt <solvebjo@uio.no> 1652274451 +0200	commit: further work on day1
+15f387d6319b629b861f0f5ffb205899bb6755bd 0872cd179c24b3da78a00941f73f41e1f26d9c6c Solveig Bjørkholt <solvebjo@uio.no> 1652274593 +0200	commit: further work on day1
+0872cd179c24b3da78a00941f73f41e1f26d9c6c 6343ad9b1ad01d66b9452c1a16d0320a364a267e Solveig Bjørkholt <solvebjo@uio.no> 1652274905 +0200	commit: further work on day1
+6343ad9b1ad01d66b9452c1a16d0320a364a267e ddce7ec4ca07b997e1030baba5fe2a5f36e04151 Solveig Bjørkholt <solvebjo@uio.no> 1652274952 +0200	commit: added schedule
+ddce7ec4ca07b997e1030baba5fe2a5f36e04151 51894a4d50fb0a5549a4f8516217d027ca8d1274 Solveig Bjørkholt <solvebjo@uio.no> 1652275137 +0200	commit: med bilde
+51894a4d50fb0a5549a4f8516217d027ca8d1274 f24c76b152c7d0c1f2727d8fd7d03c26f3c62c05 Solveig Bjørkholt <solvebjo@uio.no> 1652275209 +0200	commit: added schedule
+f24c76b152c7d0c1f2727d8fd7d03c26f3c62c05 d31784c01c649ec04eed6c6941a034616a754a0a Solveig Bjørkholt <solvebjo@uio.no> 1652275328 +0200	commit: further work on day1
+d31784c01c649ec04eed6c6941a034616a754a0a d09f1712978aff9783284f8048356045e5775ce7 Solveig Bjørkholt <solvebjo@uio.no> 1652976632 +0200	commit: further work on day 2
+d09f1712978aff9783284f8048356045e5775ce7 6e8ff09198e8fd31d4ae25e850f55b77b289018d Solveig Bjørkholt <solvebjo@uio.no> 1653299034 +0200	commit: day 2 finished
+6e8ff09198e8fd31d4ae25e850f55b77b289018d a224c8edb0a39dfc0d37278db7855b5c98377385 Solveig Bjørkholt <solvebjo@uio.no> 1653300278 +0200	commit: day 2 and attachment
+a224c8edb0a39dfc0d37278db7855b5c98377385 2007e618938427ca740af2c6da0cc1d3110996ba Solveig Bjørkholt <solvebjo@uio.no> 1653301602 +0200	commit: picture path fixing
+2007e618938427ca740af2c6da0cc1d3110996ba 142cc8c9066027abe7e70e6d17e1fee6d6bbdefb Solveig Bjørkholt <solvebjo@uio.no> 1653314820 +0200	commit: day 6 finished
+142cc8c9066027abe7e70e6d17e1fee6d6bbdefb 3568e3a0782f34cc8f77292cad27eedfd85da0e7 Solveig Bjørkholt <solvebjo@uio.no> 1653324479 +0200	commit: almost done with day 7
+3568e3a0782f34cc8f77292cad27eedfd85da0e7 785bebaca6b79a63d18cd334bb5ef42e72046566 Solveig Bjørkholt <solvebjo@uio.no> 1653386993 +0200	commit: day 7 done
+785bebaca6b79a63d18cd334bb5ef42e72046566 3538f4742b060ac3309218efb88dae8ec5b55219 Solveig Bjørkholt <solvebjo@uio.no> 1653644008 +0200	commit: day 8 finished
+3538f4742b060ac3309218efb88dae8ec5b55219 cbbbf96245735a0539a4253c7fd48e4a21fb37b8 Solveig Bjørkholt <solvebjo@uio.no> 1654170363 +0200	commit: day 9 complete and starting on day 10
+cbbbf96245735a0539a4253c7fd48e4a21fb37b8 a1d394c42ba5012959499a2fe0d7eb55198bff95 Solveig Bjørkholt <solvebjo@uio.no> 1654170407 +0200	commit: plotly working in md file?
+a1d394c42ba5012959499a2fe0d7eb55198bff95 77fb356fbe450810f56bb5a1d608f455af2a0819 Solveig Bjørkholt <solvebjo@uio.no> 1654185818 +0200	commit: halfway on day 10
+77fb356fbe450810f56bb5a1d608f455af2a0819 64d8ed34bddd55a46961a1a5f58606e381bb2bf8 Solveig Bjørkholt <solvebjo@uio.no> 1654950520 +0200	commit: Week 3 finished
+64d8ed34bddd55a46961a1a5f58606e381bb2bf8 26cc5e76309d7e2ded84a05b3a73e26389c0f84e Solveig Bjørkholt <solvebjo@uio.no> 1654950606 +0200	commit: figures for files
+26cc5e76309d7e2ded84a05b3a73e26389c0f84e 3fef11ef2523ebdbbf9a8b0302493bf6de9eda46 Solveig Bjørkholt <solvebjo@uio.no> 1654975372 +0200	commit: day 3 done

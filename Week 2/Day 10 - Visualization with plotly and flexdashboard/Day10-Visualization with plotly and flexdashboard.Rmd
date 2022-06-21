@@ -1,0 +1,291 @@
+---
+title: "Day 10"
+author: "Solveig Bjørkholt"
+date: '10. June'
+output:
+  html_document:
+    keep_md: yes
+  #pdf_document: 
+  #  keep_md: yes
+  #  extra_dependencies: ["float"]
+  github_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, error = FALSE, warning = FALSE, message=FALSE)
+library(tidyverse)
+```
+
+# Plan for today
+
+## What we will learn today:
+
+- What is `plotly` and why use it?
+- How to visualize data with `plotly`
+- Rmarkdown configurations
+- Making a dashboard through R markdown with `flexdashboard`
+
+
+# What is `plotly` and why use it?
+
+`plotly` is a framework to build visualizations. In R, it is simply a package we can download to make plots. 
+
+So maybe you've just got the hang of visualizing data with `ggplot2`. You've started creating some pretty awesome graphs and perhaps even started to get some preferences regarding background or colors. Moreover, because of the wide use and support, you can look up almost anything on the internet, and new features are being developed all the time. With all these benefits, why start learning another data visualization package at all?
+
+In all due honesty, the packages are very similar in terms of speed, user friendliness and customization tools, but `plotly` has one advantage over `ggplot`. `plotly` can create interactive graphs. This makes the package great for website development, even if you're just creating a simple dashboard. If you're working in a team with others, `plotly` can also be handy because it's simpler integrate with other programming languages such as Javascript and Python. For a good and comprehensive look at what `plotly` has to offer, have a look at [their webpage](https://plotly.com/r/). 
+
+
+# How to visualize data with `plotly`
+
+Let's compare the use of `ggplot2` and `plotly` on making our simple histogram from the gapminder dataset. As you can see, the syntax is slightly different, but the main components remain. In both syntaxes, you have to specify (1) what your dataset is, (2) which variable(s) you are plotting and (3) what kind of plot you are making. 
+
+```{r}
+
+library(ggplot2)
+library(plotly)
+
+gapminder <- gapminder::gapminder
+
+gapminder %>% # Which dataset are you using
+  ggplot(aes(lifeExp)) + # Which variable(s) are you plotting
+  geom_histogram() # Which type of plot are you making
+
+gapminder %>% # Which dataset are you using
+  plot_ly(x = ~lifeExp, # Which variable(s) are you plotting
+          type = "histogram") # Which type of plot are you making
+
+```
+
+If you opened this in a browser, you'll see that you can hover over the bars in the plot to see the data points beneath.
+
+We'll go through a few ways to do data visualization `plotly`. To do this, we'll use the Varieties of Democracy dataset (V-Dem), which is a dataset that is quite famous among political scientists. It's a huge dataset mapping regimes across the world. The dataset is available for download [here](https://www.v-dem.net/vdemds.html), but you can also use their R-package to download the data. We'll use the R-package here. The package is not yet available on CRAN -- the official place for storing and dowloading R-packages, but we can get the package from Github. To do this, we need to install `devtools` first, then use `install_github` with the name of their repository.
+
+
+```{r, eval = FALSE}
+
+install.packages("devtools")
+
+devtools::install_github("vdeminstitute/vdemdata")
+
+```
+
+With this package in place, we can load the package to R using `library`. To access the documentation for the package, have a look at [this link](https://github.com/vdeminstitute/vdemdata). I've used the function `find_var` to discover variables that might be interesting to plot, for example looking up the word "emergency".
+
+```{r}
+
+library(vdemdata)
+
+```
+
+```{r, eval = FALSE}
+
+find_var("emergency")
+
+```
+
+Once this is in order, I know which variables I want, and I extract these from the dataset using `select`. I use the function `contains` to get all the variables which have the given strings in their names. The reason is that the V-Dem dataset often has several variables for one indicator. Some of them are weighed, some of them pertain to different questions, some of them give us uncertainty estimates, and so on. If you ever want to use the V-Dem data yourself, it's a good idea to familiarize yourself with [the codebook](https://www.v-dem.net/static/website/img/refs/codebookv111.pdf).
+
+I use `glimpse` to give a small overview of what the data looks like now.
+
+```{r}
+
+vdem2 <- vdem %>% 
+  select(country_name, year, # Country and year are units in the dataset, so I definitely need them
+         contains("v2casoe"), # Was a national state of emergency in place at any point this year?
+         contains("v2regsupgroupssize"), # In total, how large is the percentage share of the domestic adult (18+) population that belongs to the political regime’s supporting groups?
+         contains("v2elsuffrage"), # What percentage (%) of adult citizens (as defined by statute) has the legal right to vote in national elections?
+         contains("v3cllabrig")) # Does labor enjoy the right to organize freely and bargain collectively?
+
+glimpse(vdem2)
+
+```
+
+### Bar plots
+
+To get bar plots with `plotly`, use `type = "bar"`. In the plot below, I make a bar plot comparing the percentage of adult population with suffrage in some southern European countries for 1880, 1950 and 1980. Notice that to add customization such as titles on the axes and plot background color, I add another layer using the pipe and call the function `layout`. 
+
+```{r}
+
+vdem2 %>%
+  filter(country_name %in% c("Spain", "Portugal", "Italy", "Greece")) %>% # Picking the countries Spain, Portugal, Italy and Greece
+  filter(year %in% c(1880, 1950, 1980)) %>% # Picking the years 1880, 1950 and 1980
+  plot_ly(x = ~country_name, # Setting the country names to be on the x-axis
+          y = ~v2elsuffrage, # Setting the percentage with suffrage on the y-axis
+          group = ~year, # Grouping the bars by year
+          color = ~factor(year), # Coloring the bars by year
+          type = "bar") %>% # Telling R that we want a bar plot
+  layout(xaxis = list(title = ""), # Adding name to the x-axis, an empty string "" gives no name
+         yaxis = list(title = "Share of adult population with the right to vote"), # Adding name to y-axis
+         plot_bgcolor = "lightgrey") # Setting the background color of the plot to light grey
+
+
+```
+
+### Scatterplots
+
+To make a scatterplot, add the argument `type = "scatter"` and `mode = "markers"`. Here, I also do a re-coding of the v2casoe_1 variable to make it dichotomous, where values below 0.5 take the category "Emergency". I use `drop_na` to rid myself of all the missing variables on the v2casoe_1 variable, since these would have been present in the plot, creating noise.  
+
+I set the variables for the x-axis, the y-axis, and for the colors of the dots. `plotly` also offers us another neat trick when creating interactive graphs, namely specifying what you want to display when the audience hovers over the information in the plots. In this case, it could be nice to give the audience information about which country and year the different plots refer to. We do this by adding `text = `, including here the values we want to show up, then adding `hoverinfo = "text"`.
+
+```{r}
+
+vdem2 %>%
+  mutate(v2casoe_1 = ifelse(v2casoe_1 < 0.5, "Emergency", "Non-emergency")) %>% # Recoding the v2casoe_1 variable to become "Emergency" if the value is over 0.5 and "Non-emergency" if the value is below 0.5
+  drop_na(v2casoe_1) %>% # Removing all missing variables from the v2casoe_1 variable
+  plot_ly(x = ~v2elsuffrage, # Setting the percentage of the population with suffrage to x-axis
+          y = ~v2regsupgroupssize_mean, # Percentage of population in regime main supporting group on y-axis
+          color = ~v2casoe_1, # Setting the colors of the dots to whether there was an emergency
+          colors = c("blue", "orange"), # Specifying colors to blue and orange
+          text = ~paste(country_name, year), # Adding a variable used to hover over the dots, pasting together values from the country_name variable and year variable
+          hoverinfo = "text", # Using this hoverinfo variable to display when hovering over dots
+          type = "scatter", # Telling R that we want a scatterplot
+          mode = "markers", # Telling R that we want dots, not lines
+          alpha = 0.2) %>% # Adding some dot transparency
+  layout(xaxis = list(title = "Share of adult population with the right to vote"),
+         yaxis = list(title = "Percentage of population in regime main supporting group"))
+
+```
+
+
+### Boxplot
+
+To make a boxplot, simply specify `type = "box"`.
+
+```{r}
+
+vdem2 %>%
+  mutate(v2casoe_1 = ifelse(v2casoe_1 < 0.5, "Emergency", "Non-emergency")) %>%
+  plot_ly(x = ~v2casoe_1,
+          y = ~v2regsupgroupssize_mean,
+          type = "box") %>%
+  layout(xaxis = list(title = ""),
+         yaxis = list(title = "Percentage of population in regime main supporting group"))
+
+```
+
+### Lineplots
+
+Lineplots are made by specifying `type = "scatter"` and `mode = "lines"`. In this case, I `filter` out Norway and look at this country over time. In this plot, I also show how to add an extra line. Adding variables to the plot can be done in several other ways in `plotly` using for example `add_lines` or `add_trace`. I give names to the lines, so that this is what will show up in the legend. Lastly, what is new in this plot is that I specify the exact coordinates of the legend and whether I want the categories to show vertically or horizontally. 
+
+```{r}
+
+vdem2 %>%
+  filter(country_name == "Norway") %>%
+  plot_ly(x = ~year, 
+          y = ~v2regsupgroupssize_mean, 
+          name = "Percentage of population in regime main supporting group", # Giving name to the line being plotted
+          type = "scatter", 
+          mode = "lines") %>% # Specifying that we want lines 
+  add_lines(y = ~v2elsuffrage, # Add an extra line to the plot, plotting the variable v2elsuffrage as well
+            name = "Percentage of adult population with the right to vote", # Giving name to the second line being plotted
+            mode = 'lines') %>% # Specifying that this should be lines, not markers (dots)
+  layout(xaxis = list(title = ""), 
+         yaxis = list(title = ""),
+         legend = list(orientation = "v", # Wanting the legend to list the categories vertically ("v")
+                       x = 0, y = 1.1)) # Placing the legend at these coordinates in the plot (play around to find the right customization)
+
+```
+
+
+### From `ggplot` to `plotly`
+
+There is a function to go from a `ggplot2` plot to a `plotly` plot, and it's called `ggplotly`. Doing that makes you ggplots interactive.
+
+```{r}
+
+plot <- vdem2 %>%
+  filter(country_name %in% c("Spain", "Portugal", "Italy", "Greece")) %>% 
+  filter(year %in% c(1880, 1950, 1980)) %>% 
+  ggplot(aes(x = country_name, 
+             y = v2elsuffrage,
+             fill = factor(year))) + 
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(x = "",
+       y = "Share of adult population with the right to vote")
+
+ggplotly(plot)
+
+```
+
+# R markdown configurations
+
+We have been working in R Markdown for a while now, and hopefully gotten familiar with some of the basic components such as putting text outside chunks and code inside chunks. When we hit the "Knit" button to make the script into a file, it *renders* the document. We can create for example html-files, pdf-files, word-files and slide-shows. Clicking the arrow down beside the "Knit" button shows us some options of the formats we can render the document to. 
+
+```{r, out.width="40%", fig.align="center", echo = FALSE}
+knitr::include_graphics("../../figures/knit.png")
+```
+
+Another option is to specify what to render in the **YAML** header. YAML is the programming language in the top of the document where we specify options for the document. This is where the header of the document goes, the author, the date, and so on. In the argument `output`, we can add which formats we want to render to whenever we hit "Knit". In the example below, I render to html, pdf and word, creating in total three documents whenever I hit "render".
+
+```{yaml, eval = FALSE}
+title: "A document"
+author: "Me"
+date: "Today"
+output:
+  html_document: default
+  pdf_document:
+    extra_dependencies: ["float"]
+  word_document
+```
+
+To make slide-shows (ala powerpoint), we can use for example `ios slides` or `beamer slides`^[we can also render to powerpoint if we want]. The arguments for these are:
+
+```{yaml, render = FALSE}
+output: ioslides_presentation
+output: beamer_presentation 
+```
+
+Indentation is very important when you specify things in YAML, so if you have error messages as you try to define the properties of your document, take an extra look at the indents. For example, in the `pdf_document` argument, we have an indent with another argument belonging to the argument above - `extra_dependencies: ["float"]`. This tells R that when rendering the document to pdf, we want to use a package from the world of pdfs^[That is, from LaTex], that makes sure that the figures stay in the same position in the document when we render, and do not move around. The indentation is necessary, as it shows that the below argument belongs to the argument above.
+
+To have a look at which features that exist with regard to rendering documents, have a look at [this page](https://bookdown.org/yihui/rmarkdown/html-document.html). 
+
+# Making a dashboard with `flexdashboard`
+
+Dashboards are extremely handy to communicate your data. They are basically visual displays of your data. The picture below is an example of a dashboard.
+
+```{r, out.width="100%", echo = FALSE}
+knitr::include_graphics("../../figures/dashboard.png")
+```
+
+Many data providers today offer a dashboard along with their data to give the user a nice overview of what the data tell us. One of my favorites is [this dashboard](https://oecd.ai/en/policy-areas) on artificial intelligence from OECD. Some of the great things about dashboards is that they give a quick overview of data, and in contrast to reports, a dashboard can use the most recent data available at all times. 
+
+R offers several ways of making dashboards. One more advanced option is to use `shiny`, a package that allows you to make apps through R. This can be very useful if you want your app to communicate extensively with the user, for example by allowing the user to define certain input and extract other types of output. However, when all we want to do is to visualize some data and allow the user to click around a bit, a simpler solution is often to go for dashboard-creating packages such as `flexdashboard`. To have a look at this package, refer to for example [this page](https://pkgs.rstudio.com/flexdashboard/) or [this page](https://bookdown.org/yihui/rmarkdown/dashboards.html). 
+
+To get started with making a dashboard using `flexdashboard`, we first need to download the package `flexdashboard` as shown below.
+
+```{r, eval = FALSE}
+
+install.packages("flexdashboard")
+
+```
+
+Having done that, click on the "File" button in RStudio to make a new file, choose R Markdown, and then choose "From Template". From the list, pick "Flex Dashboard". Now, RStudio opens a new R Markdown file which will render into a dashboard when you click "Knit". 
+
+```{r, out.width="100%", echo = FALSE}
+knitr::include_graphics("../../figures/dashboard_making.png")
+```
+
+Flexdashboards are built in what we call a "grid". That basically means that we can imagine the canvas to have a lot of squares, and we fit stuff into those squares as we go about designing the dashboard. We define the squares through rows and columns. You define a row or a column by specifying either "Column" or "Row" in your script, then optionally the size of the square, followed by a striped line, as shown below.
+
+`Column {data-width = 300}`
+
+`-------------------------------------`
+
+`Row`
+
+`-------------------------------------`
+
+These are the basic components of the flexdashboard. Building on this, you can do a lot of things, for example:
+
+ - Add tabs
+ - Add navigation bar
+ - Choose colors, icons, styles
+ - Include figures, tables, text, links
+ - Include your own CSS and/or HTML
+ - Include advanced charts, graphs and maps
+ - Allow for user-communication through shiny syntax
+
+And much more. For dashboards visualizing real-time data, consider making a dashboard that communicate with an API to fetch the latest data at all times. Later in this course, we'll learn how to deploy the dashboard so that you can put it up on the web and have it available for everyone at all times. 
+
+For an overview of some of the things that are possible, have a look at [this page](https://pkgs.rstudio.com/flexdashboard/articles/using.html). 
+

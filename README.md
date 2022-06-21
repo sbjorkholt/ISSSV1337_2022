@@ -1,5 +1,7 @@
 # Political Data Science Hackathon 2022
 
+Bookdown of course material: https://pages.github.uio.no/solvebjo/Political_Data_Science_Hackathon_2022/ 
+
 | Week | Date   | Day       | Location | Time        | Topic                                                   |
 |------|--------|-----------|----------|-------------|---------------------------------------------------------|
 | 1    | 27.jun | Monday    | Blindern | 10:15-12:15 | Introduction to course                                  |
@@ -7,7 +9,7 @@
 | 1    | 29.jun | Wednesday | Blindern | 10:15-12:15 | Introduction to data analysis and   data transformation |
 | 1    | 30.jun | Thursday  | Blindern | 10:15-12:15 | Descriptive statistics and relational data              |
 | 1    | 01.jul | Friday    | Blindern | 10:15-12:15 | Case presentations                                      |
-| 2    | 04.jul | Monday    | Blindern | 10:15-12:15 | Data sources & SQL                                      |
+| 2    | 04.jul | Monday    | Blindern | 10:15-12:15 | Databases, data sources & SQL                           |
 | 2    | 05.jul | Tuesday   | Blindern | 10:15-12:15 | Webscraping                                             |
 | 2    | 06.jul | Wednesday | Blindern | 10:15-12:15 | API                                                     |
 | 2    | 07.jul | Thursday  | Blindern | 10:15-12:15 | Data visualisation with ggplot                          |
