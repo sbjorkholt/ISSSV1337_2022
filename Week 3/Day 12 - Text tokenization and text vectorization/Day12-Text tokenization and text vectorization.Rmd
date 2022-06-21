@@ -2,7 +2,12 @@
 title: "Text tokenization and text vectorization"
 subtitle: "Day 12"
 author: "Solveig Bjørkholt"
-output: pdf_document
+day: "12. July"
+output:
+  pdf_document: 
+    keep_md: yes
+    extra_dependencies: ["float"]
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}

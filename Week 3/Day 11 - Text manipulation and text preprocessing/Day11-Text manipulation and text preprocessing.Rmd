@@ -2,12 +2,12 @@
 title: "Text manipulation and text preprocessing"
 subtitle: "Day 11"
 author: "Solveig Bjørkholt"
-date: '10. June'
+date: '11. July'
 output:
   pdf_document: 
-  keep_md: yes
-extra_dependencies: ["float"]
-github_document: default
+    keep_md: yes
+    extra_dependencies: ["float"]
+  github_document: default
 ---
   
 ```{r setup, include=FALSE}

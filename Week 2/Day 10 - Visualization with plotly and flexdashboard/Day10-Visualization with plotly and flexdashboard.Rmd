@@ -1,7 +1,7 @@
 ---
 title: "Day 10"
 author: "Solveig Bjørkholt"
-date: '10. June'
+date: '8. July'
 output:
   html_document:
     keep_md: yes

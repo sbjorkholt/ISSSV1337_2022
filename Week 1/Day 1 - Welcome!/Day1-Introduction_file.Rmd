@@ -1,8 +1,13 @@
 ---
-title: 'Day 1: Welcome to Political Data Science Hackathon 2022'
+title: 'Welcome to Political Data Science Hackathon 2022'
+subtitle: "Day 1"
 author: "Solveig Bjørkholt"
 date: "27.06.2022"
-output: pdf_document
+output:
+  pdf_document: 
+    keep_md: yes
+    extra_dependencies: ["float"]
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}

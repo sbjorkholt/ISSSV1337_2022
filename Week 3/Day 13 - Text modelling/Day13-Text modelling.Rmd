@@ -2,8 +2,12 @@
 title: "Text modelling"
 subtitle: "Day 13"
 author: "Solveig Bjørkholt"
-date: '2022-06-09'
-output: pdf_document
+date: '13. July'
+output:
+  pdf_document: 
+    keep_md: yes
+    extra_dependencies: ["float"]
+  github_document: default
 ---
 
 ```{r setup, include=FALSE}
