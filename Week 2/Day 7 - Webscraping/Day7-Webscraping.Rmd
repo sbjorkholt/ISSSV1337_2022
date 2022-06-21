@@ -205,7 +205,7 @@ To download a webpage, use the function `download.file`, and add as the first ar
 ```{r}
 
 download.file("https://en.wikipedia.org/wiki/Orange_(fruit)", # Download one html-file after another into the folder specified in folder
-                destfile = "C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html")
+                destfile = "../../datafolder/links/Oranges.html")
 
 ```
 
@@ -219,7 +219,7 @@ library(rvest)
 
 read_html("https://en.wikipedia.org/wiki/Orange_(fruit)") # Read directly from webpage
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") # Read from your downloaded file
+read_html("../../datafolder/links/Oranges.html") # Read from your downloaded file
 
 
 ```
@@ -244,7 +244,7 @@ Now, add to the code above `html_node` and paste in the thing you copied above. 
 
 ```{r}
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)")
 
 ```
@@ -253,7 +253,7 @@ To extract the text, add `html_text` to the pipeline.
 
 ```{r}
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_text()
 
@@ -263,7 +263,7 @@ If you find your `html_text` picking up a lot of special characters and/or white
 
 ```{r}
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_text2()
 
@@ -290,7 +290,7 @@ Last, instead of adding `html_text`, we now use `html_table`. This parses the co
 
 ```{r}
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
   html_table()
 
@@ -300,7 +300,7 @@ Usually, you have to do a bit of extra work with the table after having extracte
 
 ```{r}
 
-read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > table.infobox.nowrap") %>%
   html_table() %>%
   na_if("") %>% # Replaces "" with NA
@@ -327,7 +327,7 @@ What we get here is the links to other webpages and links to references (notes) 
 
 ```{r}
 
-links <- read_html("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/Oranges.html") %>%
+links <- read_html("../../datafolder/links/Oranges.html") %>%
   html_node("#mw-content-text > div.mw-parser-output > p:nth-child(9)") %>%
   html_elements("a") %>%
   html_attr("href") %>%
@@ -346,7 +346,7 @@ linkstopic <- str_remove(links, "https://en.wikipedia.org//wiki/")
 for(i in 1:length(links)) { # For all the links...
   
   download.file(links[[i]], # Download one html-file after another into the folder specified in folder
-                destfile = str_c("C:/Users/solvebjo/OneDrive - Universitetet i Oslo/Teaching/ISSSV1337/ISSSV1337/Week 2/links/", linkstopic[i], ".html"))
+                destfile = str_c("../../datafolder/links/", linkstopic[i], ".html"))
 }
 
 ```
