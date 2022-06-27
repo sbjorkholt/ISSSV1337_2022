@@ -51,16 +51,20 @@ With the code between the breaks.
 17. Download a picture of your travel goal from the internet, save it to your working folder, and include this picture in the end of your report. To add pictures to R Markdown, use the syntax below. I also show some options here, for example setting the size of the picture to 80 percent, and putting it in the middle. But be mindful that you will have to change the path to the one where you have your picture saved.
 
 ` ```{r, out.width = "80%", fig.align = "center"} `
+
 knitr::include_graphics("./path/travel-goal.png")
+
 ` ``` `
 
 18. Click "Knit" and choose to render the R Markdown file (.Rmd) into either a pdf (.pdf) or an html (.html) file. 
 
 19. For all chucks where you do not want R Markdown to show messages, errors and warnings when executing code, add one or more of the following to the chuck: warning=FALSE, error=FALSE, message=FALSE. Like so:
 
+
 ` ```{r, warning=FALSE, error=FALSE, message=FALSE}`
 
 ` ``` `
+
 
 20. For sharing with other lemonade-stand-holders, you decide to upload the report to Github. First use `pull` to get the latest update from your Github repository. Then, `add` and `commit` your R Markdown script. In the commit message, write something that will allow others to understand whart your contribution to the repository is. Last, `push` the script to Github. 
 
