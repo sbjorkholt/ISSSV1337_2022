@@ -16,7 +16,20 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, error = FALSE, warning = FA
  - Installing R and RStudio
  - Introduction to programming in R
 
-## Benefits of R
+
+## Questions{.build}
+
+Where do you plan to communicate?
+
+ - Teams?
+ - Canvas?
+ - Messenger?
+ - Slack?
+ - Discord?
+
+How many have installed R and RStudio already?
+
+## Why use R?
 
 -   R is free
 -   R enhances reproducibility
@@ -39,15 +52,6 @@ ggdraw() +
   draw_image("../../figures/car.jpg", width = 0.5, height = 1.2, x = 0.5)
 ```
 
-## R and RStudio{.build}
-
-How many have installed R and RStudio?
-
-How many are familiar with R and RStudio already?
- 
-How many have programmed in other languages previously?
-
-
 ## Github
 
 **Why?**
@@ -56,13 +60,158 @@ How many have programmed in other languages previously?
  - It gives your work exposure and publicity.
  - It can be an important component in integration with other platforms. 
 
-## Github
+## Github: Registering an account{.smaller}
 
-**Walkthrough on how to create a repository on 
+ 1. Open https://github.com in a web browser, and then select Sign up.
+2. Enter your email address.
+3. Create a password for your new GitHub account, and Enter a username, too. Next, choose whether you want to receive updates and announcements via email, and then select Continue.
+4. Verify your account by solving a puzzle. Select the Start Puzzle button to do so, and then follow the prompts.
+5. After you verify your account, select the Create account button.
+6. Next, GitHub sends a launch code to your email address. Type that launch code in the Enter code dialog, and then press Enter.
+7. GitHub asks you some questions to help tailor your experience. Choose the answers that apply to you.
+8. On the "Where teams collaborate and ship" screen, you can choose whether you want to use the Free account or the Team account. To choose the Free account, select the Skip personalization button.
+9. GitHub opens a personalized page in your browser.
+
+## Github: Creating a repository
+
+1. Click on your profile button in the right hand corner of your Github screen and choose "Your repositories".
+2. Click the green button "New". 
+3. Type a short, memorable name for your repository.
+4. Optionally, add a description of your repository.
+5. Choose a repository visibility. Here, you can pick "Public".
+6. Under "Initialize this repository with", choose "Add a README file".
+7. Click "Create repository".
+
+## Github: Add collaborators to repository
+
+1. Collect the Github usernames for the rest of the team.
+2. Navigate to the main page of the repository.
+3. Under your repository name, click Settings.
+4. In the "Access" section of the sidebar, click "Collaborators".
+5. Click "Add people".
+
+## Installing R and RStudio
+
+**R**: www.r-project.org
+
+**RStudio**: www.rstudio.com
 
 ## How RStudio works
 
 ```{r, out.width="100%", fig.align="center", echo = FALSE}
 knitr::include_graphics("../../figures/RStudio_overview.png")
 ```
+
+## Creating scripts
+
+```{r, eval = FALSE}
+
+1+1
+
+print("Hello world!")
+
+vector <- c(2, 5, 10, 3)
+
+mean(vector)
+
+paste("Hello", "World", "!")
+
+# This is a comment.
+
+```
+
+## RStudio with Github
+
+1. Find the Tools menu in the top of the RStudio interface and go to Global Options.
+2. Click Git/SVN.
+3. Click Enable version control interface for RStudio projects.
+4. Under "Git executable", if there is no path there, enter the path for your the git file that you downloaded earlier.
+
+## Git operations
+
+ - git pull
+ - git add
+ - git commit
+ - git push
+
+## Paths and folders
+
+```{r, out.width="100%", fig.align="center", echo = FALSE}
+knitr::include_graphics("../../figures/rfolders.png")
+```
+
+## What is R Markdown?
+
+ - YAML header
+ - Headers
+ - Text (+ bold, italics, code)
+ - Coding chunks
+ - Settings for coding chunks
+ 
+eval = FALSE
+echo = FALSE
+message = FALSE
+warning = FALSE
+error = FALSE
+
+
+## Objects in R   
+
+ - Assigning values to objects
+ 
+ - Different data types
+
+| Data type   |                        Properties                        |
+|-------------|:--------------------------------------------------------:|
+| `numeric`   | contains decimal and whole numbers, also called "double" |
+| `integer`   |               contains only whole numbers                |
+| `character` |           contains character strings ("words")           |
+| `factor`    |     contains categories (either ranked or unranked)      |
+| `logical`   |         contains only two values, TRUE and FALSE         |
+
+
+## Objects in R
+
+ - Different object types
+
+```{r, out.width="80%", fig.align="center", echo = FALSE}
+knitr::include_graphics("../../figures/objects.png")
+```
+
+## Packages
+
+```{r, eval = FALSE, echo=TRUE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+```{r}
+library(stringr)
+```
+
+```{r, out.width="70%", fig.align="center", echo = FALSE}
+knitr::include_graphics("../../figures/packages.png")
+```
+
+## LaTex
+
+```{r, eval = FALSE, echo = TRUE}
+install.packages("tinytex")
+install_tinytex()
+```
+
+## Functions
+
+```{r, echo = TRUE}
+
+sum(10, 10)
+
+mean(10, 10)
+
+str_to_lower("THIS IS A SENTENCE")
+
+```
+
+
+
 

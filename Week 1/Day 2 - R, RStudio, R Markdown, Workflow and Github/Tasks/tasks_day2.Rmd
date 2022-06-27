@@ -1,0 +1,67 @@
+---
+title: "Tasks day 2"
+author: "Solveig Bjørkholt"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Think about somewhere in the world you've always wanted to go. Now, let's assume you arrange a lemonade sale to help finance that trip. You start making and selling lemonade, but the process is pretty tiresome, so after a while you decide to start tracking the sales. As you go about it, you figure that you might as well make a report out of it, to make it easier to read for another time when you might want to start a project to finance something.
+
+1. Create an R Markdown script in RStudio.
+
+2. You want to report to be titled something relevant, so you add a headline with the name of your lemonade stand. Add a title to the R Markdown report with a suitable name for your lemonade stand. 
+
+3. The first part of the report should be dedicated to your goal, to keep it motivating. Add a headline with the name of somewhere nice where you want to travel, and write a few sentences below on why you want to travel there. 
+
+4. Make a new paragraph, and add in bold letters the estimated price of going to your travel goal. Bold letters are creating by wrapping the word(s) in two stars on each side: `**`word`**`
+
+5. Okay, it's time for business. Create a new headline called "Lemonade sales" and under this headline, create a vector called *prices*. This vector should contain the prices of your lemonades. Let's say you have four different lemonades in different price classes. Give the vector the values 30, 40, 10 and 20. Remember, when you want to make code in your R Markdown, use the syntax:
+
+` ```{r} `
+
+` ``` `
+
+With the code between the breaks.
+
+6. Use math in `R` to figure out how much you'll earn if you sell three lemonades worth 30, one lemonade worth 40, four lemonades worth 10 and zero lemonades worth 20.
+
+7. Find the total price of all tickets using the function `sum`.
+
+8. Create another vector with the names of your lemonades. Call the vector *names*. Remember that text values need to be wrapped into `""`, for example: `"word"`.
+
+9. Load the package `tidyverse`. 
+
+10. Form the vector *prices* and *names* into a dataset using the function `tibble`. Give the dataset a name you find appropriate. Remember, when giving names to objects in `R`, the name needs to be complete (no spaces), big and small letters create different objects, and special letters such as @ or **æøå** should be avoided
+
+11. Write the name of the dataset to print it to the console. Which row is your favorite lemonade on? Write this in a comment underneath your code.
+
+12. Check the classes of the variables (vectors) using the function `class`. Could we have made this dataset into a matrix?
+
+13. You end the sales after two hours of hard working, and decide to add a third variable in your dataset indicating how many customers you had for each lemonade. There were 49 customers for the first, 21 for the second, 59 for the third and 44 for the fourth. Create a new vector with these values and call it *customers*.
+
+14. You want to add this vector to the dataset to make it into a third variable. Try googling something like "add variable to dataset R tidyverse" and see if you can find the function for adding new variables, and how to use this function.
+
+15. Calculate how much you earned in the end by multiplying the variable *prices* with the variable *customers* together and taking the sum.
+
+16. Given what you estimated the total price of the travel to be above, write a line in italics on how many more lemonade stands it seems you'd have to hold to reach the goal. To write a word in italics, add one star on each side: `*word*`.
+
+17. Download a picture of your travel goal from the internet, save it to your working folder, and include this picture in the end of your report. To add pictures to R Markdown, use the syntax below. I also show some options here, for example setting the size of the picture to 80 percent, and putting it in the middle. But be mindful that you will have to change the path to the one where you have your picture saved.
+
+` ```{r, out.width = "80%", fig.align = "center"} `
+knitr::include_graphics("./path/travel-goal.png")
+` ``` `
+
+18. Click "Knit" and choose to render the R Markdown file (.Rmd) into either a pdf (.pdf) or an html (.html) file. 
+
+19. For all chucks where you do not want R Markdown to show messages, errors and warnings when executing code, add one or more of the following to the chuck: warning=FALSE, error=FALSE, message=FALSE. Like so:
+
+` ```{r, warning=FALSE, error=FALSE, message=FALSE}`
+
+` ``` `
+
+20. For sharing with other lemonade-stand-holders, you decide to upload the report to Github. First use `pull` to get the latest update from your Github repository. Then, `add` and `commit` your R Markdown script. In the commit message, write something that will allow others to understand whart your contribution to the repository is. Last, `push` the script to Github. 
+
+

@@ -115,7 +115,7 @@ The **one-up awards**: Two awards to the two students who make a particular effo
 knitr::include_graphics("../../figures/1up.png")
 ```
 
-## Location location{data-background="../figures/locations.png" data-background-size=cover}
+## Location location{data-background="../../figures/locations.png" data-background-size=cover}
 
 <div class="black">
 

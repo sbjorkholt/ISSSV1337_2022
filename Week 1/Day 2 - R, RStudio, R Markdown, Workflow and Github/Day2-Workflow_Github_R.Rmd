@@ -260,7 +260,7 @@ To install a package, use the function `install.packages()` and put the name of 
 
 ```{r, eval = FALSE}
 
-install.packages("string")
+install.packages("stringr")
 
 ```
 
