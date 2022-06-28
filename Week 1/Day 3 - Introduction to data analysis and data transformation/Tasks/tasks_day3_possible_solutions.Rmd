@@ -1,0 +1,164 @@
+---
+title: "Food shortage?"
+subtitle: "Tasks day 3 - Possible solutions"
+author: "Solveig Bjørkholt"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, tidy = TRUE)
+```
+
+## 
+
+1. Make an R Markdown file. Title the document: "Food shortage?"
+
+2. Make a chunk where you `library` in the *tidyverse* package.
+
+```{r, warning = FALSE, error = FALSE, message=FALSE}
+library(tidyverse)
+```
+
+3. Download the dataset `global_food_prices.csv` from Canvas. Place it in a folder on your computer and find the path to the file. With this path, read the dataset into R using the function `read_csv`. Assign the dataset to an object called `foodprices`.
+
+```{r}
+foodprices <- read.csv("../../../datafolder/global_food_prices.csv")
+```
+
+The data is gathered from [this site](https://www.kaggle.com/datasets/lasaljaywardena/global-food-prices-dataset), which again has gotten it from the [World Food Programme](https://www.wfp.org/) and [Humanitarian Data Exchange](https://data.humdata.org/).
+
+The dataset contains Global Food Prices data from the World Food Programme covering foods such as maize, rice, beans, fish, and sugar for 76 countries and some 1500 markets. The data goes back as far as 1992 for a few countries, although many countries started reporting from 2003 or thereafter. It includes these main variables: country, locality, market, goods purchased, price & currency used, quantity exchanged, and month/year of purchase.
+
+All the names of the variables are given below:
+
+ - adm0_id: country id
+ - adm0_name: country name
+ - adm1_id: locality id
+ - adm1_name: locality name
+ - mkt_id: market id
+ - mkt_name: market name
+ - cm_id: commodity purchase id
+ - cm_name: commodity purchased
+ - cur_id: currency id
+ - cur_name: name of currency
+ - pt_id: market type id
+ - pt_name: market type (Retail/Wholesale/Producer/Farm Gate)
+ - um_id: measurement id
+ - um_name: unit of goods measurement
+ - mp_month: month recorded
+ - mpyear: year recorded
+ - mpprice: price paid
+ - mp_commoditysource: Source supplying price information
+
+4. How many variables are there in this dataset? How many rows? Comment briefly on the size of the dataset in your R Markdown report. Why is it so big?
+
+```{r}
+glimpse(foodprices)
+```
+
+*The dataset has about 2 million observations and 18 variables. It's a very big dataset. The reason why this dataset is so big, is because it covers many countries that contain many markets, for many different commodities. It does this over many years. What happens then, is that we get many different units, for example "Bread-Retail in the market Fayzabad in Afghanistan in 2014". The combination of all these variables to make up so many units, results in a very big dataset.*
+
+5. To do some preliminary tests on the data, you decide to subset only a few observations and variables. First, use `filter` to get all observations where the year equals 2015 and 2020. Write it into a new object that you call `foodprices_subset`. How many observations and variables does this dataset have?
+
+```{r}
+foodprices_subset <- foodprices %>%
+  filter(mp_year %in% c("2015", "2020"))
+```
+
+*The dataset has about 450000 observations and still 18 variables.*
+
+6. Second, use `select` to fetch the variables `adm0_name`, `mp_year`, `adm1_name`, `mkt_name`, `cm_name`, `cur_name`, and `mp_price`. Overwrite the old object by adding an arrow in and calling the object the same, `foodprices_subset`. How many observations and variables does the dataset have now?
+
+```{r}
+foodprices_subset <- foodprices_subset %>%
+  select(adm0_name, mp_year, adm1_name, mkt_name, cm_name, cur_name, mp_price)
+```
+
+*Now the dataset has about 450000 observations and 7 variables.*
+
+7. Give the variables some names that work better for you to remember what they mean. You are free to choose which names you want, take a look over in the document to see what the different variables contain of information. Below is an example of some new names for the variables:
+
+ - adm0_name - country
+ - mp_year - year
+ - adm1_name - locality
+ - mkt_name - market
+ - cm_name - commodity
+ - cur_name - currency
+ - mp_price - price
+ 
+Remember that when you use `rename`, the new name comes before the old name.
+
+```{r}
+
+foodprices_subset <- foodprices_subset %>%
+  rename(country = adm0_name,
+         year = mp_year,
+         locality = adm1_name,
+         market = mkt_name,
+         commodity = cm_name,
+         currency = cur_name,
+         price = mp_price)
+
+```
+
+8. What is the extent of missing values (`NA`) in our dataset? Use `is.na` and `table` to figure it out.
+
+```{r}
+foodprices_subset %>%
+  is.na() %>%
+  table()
+```
+
+9. Use some maths in R to figure out what the percentage of missing values is. Recall that percentages are calculated by the number of observations that are missing, divided by all the observations, and multiplied by one hundred. Write the number in your report.
+
+```{r}
+407605/(407605+2756535)*100
+```
+
+*About 13 percent of the observations in the dataset has missing values.*
+
+10. Use `group_by` and `summarise` to figure out what the sum of the prices for food was in each country for each year. Recall the the function used to find the sum is `sum`, and that to avoid trouble because of missing values, you have to add `na.rm = TRUE`.
+
+```{r}
+foodprices_subset %>%
+  group_by(country, year) %>%
+  summarise(food = sum(price, na.rm = TRUE))
+```
+
+11. What was the total price for food for Kenya? Use the code you wrote above and add a row using `filter` to figure it out.
+
+```{r}
+foodprices_subset %>%
+  group_by(country, year) %>%
+  summarise(food = sum(price, na.rm = TRUE)) %>%
+  filter(country == "Kenya")
+```
+
+12. What's the average price for food for all countries in 2015 and 2020 respectively? Remember that the function `mean` gives you the average. 
+
+```{r}
+foodprices_subset %>%
+  group_by(year) %>%
+  summarise(foodprice = mean(price, na.rm = TRUE))
+```
+
+11. What does the code below do? Comment each line to explain what the different lines do. Remember that comments are made by setting a hashtag in the code chunk and writing your comment after that; # comment
+
+Which country traded most spices in our dataset?
+
+```{r}
+foodprices_subset %>%
+  group_by(country, year) %>% # grouping by country and year to get statistics by these variables
+  count(commodity, name = "commodity_number") %>% # counting the number of commodities per country and year
+  na.omit() %>% # removing rows with missing values
+  mutate(spices_commodity = ifelse(commodity %in% c("Salt - Retail", "Sugar - Retail"), # making a new variable called "spices_commodity" and using ifelse to say that if the variable commodity has the values "Salt - Retail" or "Sugar - Retail"...
+                                   "spice", # ... the new variable "spices_commodity" should have the value "spices"...
+                                   "other")) %>% # ... otherwise it should have the name "other"
+  filter(spices_commodity == "spice") %>% # filter out only the rows that have the value "spice" on our new variable
+  ungroup() %>% # ungrouping the dataset
+  arrange(desc(commodity_number)) # arranging the dataset so that the values with the highest number on commodity_number comes on top, then descending.
+```
+
+*Indonesia traded most spices.*
+
+
