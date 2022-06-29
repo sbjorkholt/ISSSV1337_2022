@@ -1,0 +1,579 @@
+"","Rank","City","Cost.of.Living.Index","Rent.Index","Cost.of.Living.Plus.Rent.Index","Groceries.Index","Restaurant.Price.Index","Local.Purchasing.Power.Index"
+"1",NA,"Hamilton, Bermuda",NA,96.1,124.22,157.89,155.22,79.43
+"2",NA,"Zurich, Switzerland",131.24,69.26,102.19,136.14,132.52,129.79
+"3",NA,"Basel, Switzerland",NA,49.38,NA,137.07,130.95,111.53
+"4",NA,"Zug, Switzerland",128.13,72.12,101.87,132.61,NA,143.4
+"5",NA,"Lugano, Switzerland",123.99,44.99,86.96,129.17,119.8,111.96
+"6",NA,"Lausanne, Switzerland",122.03,59.55,92.74,122.56,127.01,NA
+"7",NA,"Beirut, Lebanon",120.47,NA,77.01,141.33,116.95,15.4
+"8",NA,"Bern, Switzerland",118.16,46.12,NA,NA,120.88,112.46
+"9",NA,"Geneva, Switzerland",NA,75.05,NA,NA,126.31,NA
+"10",NA,"Stavanger, Norway",104.61,35.38,72.16,102.46,NA,85.9
+"11",NA,"Honolulu, HI, United States",NA,65.07,85.56,NA,94.28,89.24
+"12",NA,"Oslo, Norway",102.33,46.39,76.11,97.62,NA,85.18
+"13",NA,"Bergen, Norway",100.38,34.84,69.66,96.22,103.51,86.96
+"14",NA,NA,100,100,NA,NA,100,100
+"15",NA,"Trondheim, Norway",99.43,37.74,70.52,95.11,103.21,88
+"16",NA,"Tromso, Norway",98.99,37.19,70.02,NA,103.47,NA
+"17",NA,"Reykjavik, Iceland",97.61,46.27,73.55,91.92,105.77,74.84
+"18",NA,"Saint Helier, Jersey",NA,NA,81.85,79.94,109.51,80.43
+"19",NA,"Santa Barbara, CA, United States",NA,NA,87.23,99.53,99.41,93.86
+"20",NA,"Tel Aviv-Yafo, Israel",94.49,53.22,75.15,82.98,106.66,70.22
+"21",NA,NA,NA,88.22,91.48,NA,78.85,NA
+"22",NA,"San Francisco, CA, United States",93.91,108.42,100.72,97.05,93.4,133.16
+"23",NA,"Oakland, CA, United States",92.93,87.79,90.52,98.46,78.71,111.73
+"24",NA,NA,NA,39.29,NA,97.95,78.76,118.63
+"25",NA,"Santa Clara, CA, United States",89.41,90.39,89.87,100.63,73.46,155.41
+"26",NA,"Petah Tikva, Israel",88.86,32.68,62.52,NA,NA,NA
+"27",NA,"Beersheba, Israel",88.77,23.1,NA,NA,92.07,80.11
+"28",NA,"Seattle, WA, United States",88.52,65.84,77.89,87.34,93.09,145.39
+"29",NA,"Copenhagen, Denmark",88.34,49.42,70.1,71.49,NA,90.67
+"30",NA,"Arhus, Denmark",88.18,36.52,63.97,69.2,111.78,95.49
+"31",NA,NA,87.44,NA,NA,74.28,94.59,77.61
+"32",NA,"Jerusalem, Israel",86.32,40.36,64.78,74.46,101.01,79.55
+"33",NA,"Nassau, Bahamas",85.98,36.36,62.72,76.79,86.61,NA
+"34",NA,"London, United Kingdom",85.62,76.51,81.35,NA,89.41,88.79
+"35",NA,"Tokyo, Japan",85.61,42.71,65.5,94.94,52.26,88.58
+"36",NA,NA,85.47,78.26,NA,85.4,90.86,115.72
+"37",NA,"Nice, France",NA,36.1,61.87,83.37,NA,64.22
+"38",NA,"Paris, France",84.35,48.79,67.68,NA,81.64,80.2
+"39",NA,"Queens, NY, United States",84.02,69.36,77.15,79.19,83.16,105.72
+"40",NA,"Singapore, Singapore",83.98,66.43,75.75,77.08,61.17,91.34
+"41",NA,"Washington, DC, United States",83.74,NA,NA,NA,82.36,121.83
+"42",NA,"Sydney, Australia",83.21,58.03,71.41,79.65,73.06,104.52
+"43",NA,"Luxembourg, Luxembourg",82.99,63.43,73.82,NA,95.17,100.19
+"44",NA,"Espoo, Finland",NA,35.95,60.66,74.46,NA,90.3
+"45",NA,NA,82.43,23.26,54.7,71.24,93.27,100.93
+"46",NA,"Pittsburgh, PA, United States",82.36,39.14,62.1,89.37,68.36,115.5
+"47",NA,"Darwin, Australia",82.06,35.04,NA,83.7,83.45,109.44
+"48",NA,NA,80.82,55.8,69.09,NA,85.59,94.45
+"49",NA,"Jersey City, NJ, United States",80.79,63,72.45,81.67,NA,155.89
+"50",NA,NA,80.71,74.57,77.83,84.72,NA,65.74
+"51",NA,"Breda, Netherlands",NA,32.34,58,67.22,NA,84.3
+"52",NA,"Nanaimo, BC, Canada",80.26,34.06,58.6,87.2,67.48,57.49
+"53",NA,"Auckland, New Zealand",80.19,45.49,NA,75.19,79.09,79.21
+"54",NA,"Haarlem, Netherlands",79.79,NA,67.14,66.33,79.42,77.06
+"55",NA,"Utrecht, Netherlands",79.76,44.61,63.28,65.53,85.88,NA
+"56",NA,"Brighton, United Kingdom",79.57,51.44,66.39,63.41,NA,74.78
+"57",NA,"Brisbane, Australia",79.44,37.56,59.81,79.33,74.5,103.8
+"58",NA,"Philadelphia, PA, United States",79.19,49.57,65.31,81.67,71.07,115.61
+"59",NA,"Los Angeles, CA, United States",79.19,74.48,76.98,75.94,NA,126.12
+"60",NA,"Minneapolis, MN, United States",79.08,47.05,64.07,79.07,NA,114.68
+"61",NA,"Turku, Finland",79.06,23.62,53.07,NA,89.3,96.82
+"62",NA,"Dublin, Ireland",79.05,62.39,71.24,NA,83.31,81.82
+"63",NA,"Stockholm, Sweden",78.92,43.96,62.54,70.58,NA,95.42
+"64",NA,"Birmingham, AL, United States",78.82,28.19,55.09,84.3,75.48,84.93
+"65",NA,"Seoul, South Korea",78.66,33.87,57.66,98.28,47.26,74.5
+"66",NA,"Eindhoven, Netherlands",78.24,NA,59.26,64.14,78.09,86.92
+"67",NA,"Odense, Denmark",78.23,NA,NA,63.2,90.81,94.79
+"68",NA,"Miami, FL, United States",78,64.96,71.88,76.72,NA,NA
+"69",NA,"Groningen, Netherlands",77.94,27.96,54.51,65.77,77.83,78.31
+"70",NA,"Sacramento, CA, United States",NA,50.55,65.07,80.84,70.23,101.43
+"71",NA,"Nijmegen, Netherlands",77.8,31.3,56,65.82,79.62,86.52
+"72",NA,"Munich, Germany",NA,47.34,NA,66.77,76.82,95.16
+"73",NA,"Galway, Ireland",77.44,NA,59.8,67.73,77.69,71.94
+"74",NA,"St. John's, Newfoundland and Labrador, Canada",77.4,21.57,51.23,77.91,77.37,NA
+"75",NA,"Innsbruck, Austria",77.32,30.14,NA,66.32,NA,68.01
+"76",NA,"Perth, Australia",77.29,33.08,56.57,76.45,72.08,110.04
+"77",NA,NA,77.26,NA,63.83,NA,78.68,121.26
+"78",NA,"Asheville, NC, United States",77.25,45.36,62.3,NA,71.12,94.16
+"79",NA,NA,77.21,31.45,55.76,76.04,71.34,NA
+"80",NA,"Leiden, Netherlands",77.2,37.29,58.49,66.23,NA,77.18
+"81",NA,"Helsinki, Finland",77.17,38.32,NA,69.7,83.74,NA
+"82",NA,"Chicago, IL, United States",77.06,NA,67.77,73.3,76.34,135.26
+"83",NA,"Fort Lauderdale, FL, United States",76.86,56.56,67.35,NA,82.48,NA
+"84",NA,"Portland, OR, United States",76.83,52.91,65.62,75.46,74.61,108.09
+"85",NA,"Melbourne, Australia",76.76,38.65,58.9,77.78,74.68,102.16
+"86",NA,NA,76.71,29.13,54.41,82.24,44.42,81.58
+"87",NA,"Wellington, New Zealand",76.66,45.43,62.02,75.75,69.08,85.49
+"88",NA,"Victoria, Canada",76.65,44.9,61.77,80.26,79.11,NA
+"89",NA,"Vancouver, Canada",76.61,NA,67.17,NA,74.29,87.68
+"90",NA,NA,76.6,48.58,63.47,78,NA,NA
+"91",NA,"Adelaide, Australia",NA,32.79,56.06,NA,67.72,NA
+"92",NA,"Lund, Sweden",76.58,28.43,54.01,72.64,72.53,104.91
+"93",NA,"Toulouse, France",76.57,24.74,52.27,NA,79.45,90.06
+"94",NA,"Guelph, Canada",76.36,38.13,NA,77.93,NA,NA
+"95",NA,"Rotterdam, Netherlands",76.24,NA,60.07,64.83,76.3,91.36
+"96",NA,NA,NA,43.96,61.07,73.4,77.55,106.63
+"97",NA,"Cork, Ireland",76.15,42.64,60.44,62.63,82.01,84.45
+"98",NA,"Guildford, United Kingdom",76.02,49.12,63.41,66.52,74.95,78.75
+"99",NA,"Plano, TX, United States",75.94,48.36,63.01,77.11,61.45,105.41
+"100",NA,"Canberra, Australia",75.94,42.5,60.26,NA,79.07,105.11
+"101",NA,"Tampa, FL, United States",NA,46.37,62.02,80.03,74.23,NA
+"102",NA,NA,NA,39.95,NA,73.38,73.8,101.22
+"103",NA,"Oxford, United Kingdom",75.68,49.17,63.25,65.9,75.45,104.03
+"104",NA,"Nagoya, Japan",75.62,57.61,67.18,NA,40.27,NA
+"105",NA,"Lincoln, United Kingdom",75.6,22.24,50.59,NA,90.13,88.99
+"106",NA,"York, United Kingdom",75.52,NA,56.1,62.37,80.71,73.46
+"107",NA,"San Diego, CA, United States",75.47,68.77,72.33,73.82,78.67,127.94
+"108",NA,NA,75.41,35.29,56.6,76.36,79.48,125.32
+"109",NA,"Omaha, NE, United States",75.31,30.21,54.17,72.55,80.25,106.03
+"110",NA,"Leuven, Belgium",75.27,28.6,53.39,64.58,NA,83.59
+"111",NA,"Reading, United Kingdom",75.27,41.7,59.53,63.44,85.76,100.89
+"112",NA,"Hamilton, New Zealand",NA,31.02,NA,74.45,NA,123.18
+"113",NA,"Denver, CO, United States",75.16,55.36,65.88,72.13,76.59,129.98
+"114",NA,"Uppsala, Sweden",75.08,27.8,52.92,68.03,76.36,83.94
+"115",NA,"Newcastle, Australia",74.99,NA,57.48,74.17,79.49,118.92
+"116",NA,NA,74.91,NA,55.75,82.91,65.22,87.92
+"117",NA,"Milan, Italy",74.8,44.61,60.65,62.83,NA,NA
+"118",NA,"Sliema, Malta",74.78,31.54,54.51,68.77,82.09,47.96
+"119",NA,"Graz, Austria",NA,22.54,50.19,NA,62.68,79.03
+"120",NA,"Brussels, Belgium",74.39,NA,55.15,64.69,77,NA
+"121",NA,"Buffalo, NY, United States",74.29,29.56,53.32,72.4,73.62,124.36
+"122",NA,"Toronto, Canada",74.29,51.78,NA,69.91,74.36,101.29
+"123",NA,"Colorado Springs, CO, United States",NA,41.51,58.91,NA,72.77,137.64
+"124",NA,"Fremont, CA, United States",74.12,74.93,74.5,75.4,71,157.35
+"125",NA,"Limerick, Ireland",74.11,40.25,58.24,61.06,77.49,96.5
+"126",NA,"Salem, OR, United States",NA,35.81,56.09,78.63,63.1,89.2
+"127",NA,"The Hague (Den Haag), Netherlands",73.94,41.27,58.63,NA,NA,88.51
+"128",NA,"Hobart, Australia",73.93,37.44,56.83,71.28,73.19,NA
+"129",NA,"Christchurch, New Zealand",73.85,32.58,54.51,72.38,70.9,90.2
+"130",NA,NA,73.75,NA,51.68,67.5,NA,84.86
+"131",NA,"San Jose, CA, United States",73.71,82.3,77.74,70.53,74.25,NA
+"132",NA,"Nashville, TN, United States",73.62,53.5,64.19,73.46,74,111.46
+"133",NA,"Enschede, Netherlands",NA,28.67,52.54,66.31,76.96,93.83
+"134",NA,"Olympia, WA, United States",73.58,37.93,56.87,77.67,81.13,108.83
+"135",NA,"Maastricht, Netherlands",73.56,36.64,56.26,65.97,72.83,86.5
+"136",NA,"Baltimore, MD, United States",73.56,41.68,58.61,74.65,73.38,136.13
+"137",NA,"New Orleans, LA, United States",73.55,43.45,59.44,NA,76.72,92.88
+"138",NA,"Linz, Austria",73.55,NA,51.49,67.58,75.39,NA
+"139",NA,"Calgary, Canada",NA,34.08,54.97,70.06,72.09,114.16
+"140",NA,"Edinburgh, United Kingdom",73.15,37.38,56.38,59.68,84.71,88.03
+"141",NA,"Ottawa, Canada",73.15,39.86,57.54,70.8,73.74,94.3
+"142",NA,"Milton Keynes, United Kingdom",73.14,37.65,56.5,60.6,73.63,73.92
+"143",NA,"Manchester, United Kingdom",73.14,34.94,55.23,60.14,87.5,91.33
+"144",NA,NA,73.12,47.77,61.24,NA,65.27,NA
+"145",NA,"Cambridge, United Kingdom",73.05,46.16,60.44,60.4,83.11,NA
+"146",NA,"Gothenburg, Sweden",72.97,31.35,53.46,65.03,77.34,101.17
+"147",NA,NA,72.86,29.03,NA,68.2,73.73,109.54
+"148",NA,"Parma, Italy",72.81,21.7,48.85,60.1,77.72,NA
+"149",NA,"Genoa, Italy",72.79,NA,47.91,69.58,71.05,51.57
+"150",NA,"Frankfurt, Germany",72.78,39.15,57.02,NA,66.41,106.89
+"151",NA,NA,72.75,43.09,58.84,83.18,56.71,100.34
+"152",NA,"Grenoble, France",72.67,NA,48.64,72.16,66.83,81.58
+"153",NA,"Bergamo, Italy",72.64,NA,49.5,NA,73.57,63.32
+"154",NA,"Derby, United Kingdom",72.57,21.68,48.71,58.01,80.36,119.81
+"155",NA,"Iowa City, IA, United States",72.54,31.69,53.39,NA,NA,NA
+"156",NA,"Delft, Netherlands",72.54,30.43,52.8,65.99,63.12,91.65
+"157",NA,"Syracuse, NY, United States",72.53,31.3,NA,79.21,NA,78.44
+"158",NA,"Everett, WA, United States",72.38,NA,59.62,72.08,81.87,NA
+"159",NA,"Saskatoon, Canada",NA,NA,51.51,68.37,69.98,88.18
+"160",NA,NA,72.14,32.91,53.75,52.74,77.41,102.21
+"161",NA,NA,72.1,NA,59.74,65.21,77.13,108.69
+"162",NA,"Hamburg, Germany",72.01,NA,55.48,NA,68.12,101.1
+"163",NA,"Red Deer, Canada",71.73,NA,48.64,70.32,65.19,123.94
+"164",NA,"Surrey, Canada",NA,40.84,57.22,71.55,72.28,98.13
+"165",NA,"Trieste, Italy",71.65,18.08,46.54,64.55,73.07,63.01
+"166",NA,"Rochester, NY, United States",71.57,29.13,51.68,71.98,69.13,NA
+"167",NA,"Milwaukee, WI, United States",71.56,39.74,56.65,73.6,68.6,109.19
+"168",NA,"Albany, NY, United States",71.49,34.7,NA,NA,78.98,129.75
+"169",NA,NA,71.39,NA,50.19,56.4,86.7,90.09
+"170",NA,"Nottingham, United Kingdom",71.34,NA,50.43,65.7,NA,91.62
+"171",NA,NA,71.33,25.8,49.99,61.55,76,90.25
+"172",NA,"Bristol, United Kingdom",71.32,40.45,56.85,56.75,83.16,84.81
+"173",NA,NA,71.19,25.36,49.71,61.78,84.07,91.43
+"174",NA,"Portsmouth, United Kingdom",71.16,NA,52.11,NA,78.14,85.02
+"175",NA,"Bonn, Germany",NA,30.96,52.27,53.92,73.85,95.72
+"176",NA,"Marseille, France",71.05,23.86,48.93,72.68,64.74,95.31
+"177",NA,"Rome, Italy",NA,37.19,NA,62.72,70.26,51.33
+"178",NA,"Tauranga, New Zealand",70.87,26.04,49.86,73.26,67.88,84.35
+"179",NA,"Florence, Italy",70.81,27.63,NA,65.22,73.13,53.36
+"180",NA,"Plymouth, United Kingdom",70.7,NA,49.1,58,73.68,84.01
+"181",NA,NA,70.68,NA,NA,68.34,NA,110.05
+"182",NA,"Reno, NV, United States",70.67,46.95,NA,71.66,71.09,96.91
+"183",NA,NA,70.62,20.64,47.19,66.72,69.74,101.06
+"184",NA,NA,NA,31.2,52.13,73.62,NA,89.93
+"185",NA,"Salzburg, Austria",70.53,32.15,52.54,66.99,68.46,77.81
+"186",NA,NA,70.49,36.54,54.57,64.74,79.2,100.36
+"187",NA,"Brampton, Canada",70.44,39.17,55.78,69.11,60.26,103.49
+"188",NA,NA,70.42,40.41,56.35,70.1,NA,112.62
+"189",NA,"Durham, NC, United States",70.37,42.09,NA,80.32,66.25,104.76
+"190",NA,"Winnipeg, Canada",70.33,27.37,50.19,70.13,62.04,101.59
+"191",NA,"Ann Arbor, MI, United States",70.28,47.97,59.82,74.16,NA,159.99
+"192",NA,NA,NA,37.64,54.98,NA,NA,92.73
+"193",NA,NA,70.14,32.29,52.4,74.76,58.11,66.7
+"194",NA,"Charlotte, NC, United States",70.06,51.42,61.32,69.24,67.63,144.88
+"195",NA,"Norwich, United Kingdom",70.06,26.85,49.81,62.4,73.92,79.66
+"196",NA,"Gent, Belgium",69.97,NA,49.97,60.18,76.78,77.4
+"197",NA,"Exeter, United Kingdom",69.9,31.96,NA,54.86,74.18,NA
+"198",NA,"Dortmund, Germany",69.89,21.15,47.04,56.17,60.72,105.62
+"199",NA,"Long Beach, CA, United States",69.87,NA,63.9,73.73,NA,110.03
+"200",NA,"Bologna, Italy",69.79,26.48,49.49,61.83,74.24,58.89
+"201",NA,NA,69.79,55.44,63.07,70.45,70.77,110.05
+"202",NA,"Kelowna, Canada",69.73,41.68,56.58,64.84,71.84,NA
+"203",NA,"Columbus, OH, United States",69.7,37.02,54.38,67.9,NA,151.29
+"204",NA,"Brescia, Italy",69.64,18.56,45.7,NA,69.04,69.1
+"205",NA,"Eugene, OR, United States",69.64,37.71,54.67,78.13,67.36,88.21
+"206",NA,"Macao, Macao",69.61,NA,56.23,72.72,NA,67.31
+"207",NA,"Cologne, Germany",69.59,31.03,51.51,56.46,64.7,89.1
+"208",NA,NA,NA,35.37,53.51,74.58,70.42,144.3
+"209",NA,"Regina, Canada",69.44,NA,49.4,70.31,66.08,NA
+"210",NA,"Phoenix, AZ, United States",69.37,43.85,57.4,66.78,71.42,135.94
+"211",NA,"Des Moines, IA, United States",NA,30.03,50.91,72.4,65.94,108.35
+"212",NA,NA,68.99,21.46,46.71,69.42,65.08,87.22
+"213",NA,"Fresno, CA, United States",NA,34.02,52.59,64.72,72.91,116.4
+"214",NA,"Berlin, Germany",68.94,38.59,54.71,56.41,61.05,105.86
+"215",NA,"Cardiff, United Kingdom",68.91,29.64,NA,56.87,76.53,106.17
+"216",NA,"Windsor, Canada",68.88,31.13,51.19,64.56,71.92,58.02
+"217",NA,"Glasgow, United Kingdom",68.76,28.82,50.04,55.63,77.95,96.42
+"218",NA,"Kitchener, Canada",68.7,35.83,53.29,NA,70.72,NA
+"219",NA,"Vancouver, WA, United States",68.57,43.47,56.8,64.68,NA,126.09
+"220",NA,"Kingston, Canada",68.57,33,51.9,68.42,65.4,75.42
+"221",NA,"Augsburg, Germany",68.51,NA,48.53,55.01,66.96,79.93
+"222",NA,"Stuttgart, Germany",68.38,35.27,52.86,55.5,71.32,109.02
+"223",NA,"Vienna, Austria",68.36,34.66,52.56,61.71,66.93,79.56
+"224",NA,"Mannheim, Germany",68.35,22.77,NA,NA,65.4,95.07
+"225",NA,"Las Vegas, NV, United States",68.34,NA,54.22,61.14,73.39,124.83
+"226",NA,"Boise, ID, United States",68.29,43.29,56.57,60.93,81.52,82.63
+"227",NA,"Dusseldorf, Germany",68.28,32.44,51.48,NA,NA,109.99
+"228",NA,"Raleigh, NC, United States",68.2,41.39,NA,70.36,69.44,144.12
+"229",NA,"Pisa, Italy",68.17,22.37,46.7,66.1,66.85,52.1
+"230",NA,NA,68.11,NA,52.63,64.88,NA,112.36
+"231",NA,"Orlando, FL, United States",68.1,45.87,57.68,66.7,69.78,NA
+"232",NA,"Dayton, OH, United States",NA,27.92,49.23,66.09,NA,79.21
+"233",NA,"Verona, Italy",67.98,21.34,46.11,62.32,68.68,63.11
+"234",NA,"Dallas, TX, United States",NA,50.17,59.56,63.61,71.74,170.66
+"235",NA,"Richmond, VA, United States",67.75,37.52,53.58,65.07,77.5,130.94
+"236",NA,"Louisville, KY, United States",67.71,32.24,51.09,NA,69.26,109.65
+"237",NA,"Southampton, United Kingdom",67.59,32.4,51.09,55.69,69.59,98.44
+"238",NA,"Leeds, United Kingdom",67.57,30.47,50.18,NA,75.71,88.49
+"239",NA,"Treviso, Italy",NA,21.03,45.74,60.07,72.34,61.95
+"240",NA,"Madison, WI, United States",NA,38.75,NA,NA,NA,132.13
+"241",NA,"Birmingham, United Kingdom",67.25,NA,51.24,55.36,68.91,81.78
+"242",NA,"Indianapolis, IN, United States",67.14,36.12,52.6,67.62,67.64,NA
+"243",NA,NA,NA,27.03,NA,55.62,60.74,95.57
+"244",NA,"Nuremberg, Germany",66.97,25.4,47.49,55.63,60.21,115.65
+"245",NA,"Hamilton, Canada",66.95,35.98,52.43,NA,NA,86.35
+"246",NA,"Coventry, United Kingdom",66.94,28.91,NA,58.06,63.75,NA
+"247",NA,"Newcastle upon Tyne, United Kingdom",66.86,25.72,47.57,56.08,71.13,97.66
+"248",NA,"Saint Louis, MO, United States",66.83,32.58,50.78,67.03,66.47,123.2
+"249",NA,"Ulm, Germany",66.67,28.74,48.89,50.43,68.61,107.39
+"250",NA,"Stoke-on-Trent, United Kingdom",66.58,NA,43.58,52.76,73.8,97.94
+"251",NA,"Austin, TX, United States",NA,57.68,62.36,67.33,73.74,158.21
+"252",NA,"Dundee, United Kingdom",66.46,23.27,46.22,56.19,NA,82.43
+"253",NA,"Saarbrucken, Germany",66.3,NA,NA,50.44,73.24,85.4
+"254",NA,"Kansas City, MO, United States",66.07,33.5,50.8,60.66,75.16,127.2
+"255",NA,NA,66.06,18.51,43.77,58.2,67.44,57.68
+"256",NA,NA,65.88,NA,48.03,51.61,66.17,103.03
+"257",NA,"Sheffield, United Kingdom",65.88,26.92,47.62,57.43,NA,NA
+"258",NA,"Taipei, Taiwan",65.8,24.64,46.5,80.24,34.24,59.33
+"259",NA,"Belfast, United Kingdom",65.74,26.12,47.17,57.73,74.02,91.62
+"260",NA,NA,65.69,37.25,52.36,69,60.43,91.7
+"261",NA,"Darmstadt, Germany",65.48,27.73,47.78,52.99,60.54,108.54
+"262",NA,"Limassol, Cyprus",65.26,29.86,48.66,53.36,NA,55.84
+"263",NA,"Turin, Italy",65.19,22.02,NA,59.26,64.02,67.23
+"264",NA,"St.Catharines, Canada",65.18,32.67,49.94,NA,56.27,71.18
+"265",NA,"Best, Netherlands",65.13,28.11,47.78,59.33,NA,97.21
+"266",NA,"Toledo, OH, United States",64.99,22.91,45.26,64.78,63.45,90.45
+"267",NA,"Salt Lake City, UT, United States",64.95,42.34,54.35,61.4,65.68,140.61
+"268",NA,"Oklahoma City, OK, United States",64.94,31.83,49.42,69.97,57.78,127.95
+"269",NA,"Padova, Italy",64.93,22.03,44.82,52.16,NA,66.62
+"270",NA,"Leicester, United Kingdom",64.91,24.93,46.17,52.47,72.19,92.59
+"271",NA,"Freiburg im Breisgau, Germany",64.65,35.49,50.98,50.02,62.73,94.46
+"272",NA,"Erlangen, Germany",64.54,24.83,45.93,NA,67.89,131.75
+"273",NA,"Nicosia, Cyprus",NA,19.34,43.35,52.57,65.96,60.28
+"274",NA,"Cincinnati, OH, United States",64.39,39.74,52.83,64.25,63.76,125.17
+"275",NA,"Tucson, AZ, United States",64.34,27.66,47.15,61.91,65.88,83.69
+"276",NA,"Dubai, United Arab Emirates",64.32,44.08,54.83,48.24,70.7,101.11
+"277",NA,"Houston, TX, United States",63.94,43.38,NA,61.26,67.45,172.98
+"278",NA,"Bilbao, Spain",63.81,26.88,46.5,57.84,NA,65.48
+"279",NA,"Bournemouth, United Kingdom",63.73,32.77,49.21,NA,68.9,76.52
+"280",NA,"Mesa, AZ, United States",63.66,32.99,49.28,63.2,72.07,103.42
+"281",NA,"Essen, Germany",63.61,20.98,43.63,47.32,65.81,81.89
+"282",NA,"Albuquerque, NM, United States",63.44,NA,NA,64.6,64.07,122.44
+"283",NA,"Aberdeen, United Kingdom",63.4,23.06,44.49,NA,77.47,102.02
+"284",NA,"Lexington, KY, United States",62.92,29.27,NA,69.21,55.65,102.4
+"285",NA,"Doha, Qatar",62.9,49.19,56.48,NA,63,NA
+"286",NA,"Leipzig, Germany",62.83,23.29,44.3,47.91,55.86,79.8
+"287",NA,"San Antonio, TX, United States",62.59,38.27,51.19,NA,69.45,NA
+"288",NA,"Bari, Italy",62.59,18.14,NA,53.28,65.58,64.98
+"289",NA,"Dresden, Germany",62.46,21.21,43.12,47.74,58.64,109.14
+"290",NA,"Tulsa, OK, United States",62.35,28.92,46.68,58.89,60.48,132.05
+"291",NA,"Naples, Italy",62.35,21.37,43.14,53.19,59.26,56.2
+"292",NA,"Memphis, TN, United States",62.29,34.91,49.45,NA,69.54,109.95
+"293",NA,"Bremen, Germany",62.24,23.82,44.23,NA,NA,77.06
+"294",NA,"Akron, OH, United States",62.2,22.9,43.78,63.55,NA,102.89
+"295",NA,"Kingston upon Hull, United Kingdom",62.07,21.79,43.19,NA,63.89,86.57
+"296",NA,"Aachen, Germany",61.81,21.74,43.03,NA,57.99,116.48
+"297",NA,"Kaohsiung, Taiwan",61.4,15.91,NA,75.57,28.88,55.49
+"298",NA,"Regensburg, Germany",61.36,27.54,45.51,47.29,61.66,103.28
+"299",NA,"Barcelona, Spain",61.15,30.6,46.83,49.39,61.89,70.83
+"300",NA,"Little Rock, AR, United States",59.26,25.6,43.48,57.28,64.63,131.07
+"301",NA,"Port of Spain, Trinidad And Tobago",NA,NA,40.46,51.98,73.56,40.68
+"302",NA,"Madrid, Spain",59.01,31.95,NA,49.14,NA,74.83
+"303",NA,"Palma de Mallorca, Spain",58.97,28.92,44.88,48.41,61.53,63.24
+"304",NA,"Athens, Greece",58.97,17.92,39.73,46.99,60.78,40.03
+"305",NA,"Wichita, KS, United States",58.92,24.26,42.67,53.08,57.42,NA
+"306",NA,"Patras, Greece",58.74,10.18,35.98,43.05,43.7,37.37
+"307",NA,"Thessaloniki, Greece",58.4,13.6,NA,43.85,55.28,37.91
+"308",NA,"Palermo, Italy",57.97,14.72,NA,49.5,52.07,58.89
+"309",NA,"Abu Dhabi, United Arab Emirates",57.89,91.8,73.79,49.79,58.49,75.22
+"310",NA,"Larnaca, Cyprus",57.38,19.76,39.74,47.83,55.84,NA
+"311",NA,"Catania, Italy",57.35,NA,38.68,44.63,61.39,54.62
+"312",NA,"Male, Maldives",57.26,29.87,NA,NA,33.01,28.52
+"313",NA,"Ljubljana, Slovenia",NA,23.5,41.4,49.44,52.01,60.19
+"314",NA,"Heraklion, Greece",57.08,15.25,37.47,NA,NA,36.04
+"315",NA,"El Paso, TX, United States",55.92,23.17,40.56,54.45,48.18,118.77
+"316",NA,"Havana, Cuba",55.91,17.2,37.77,45.92,40.14,NA
+"317",NA,"Tallinn, Estonia",NA,19.24,38.63,42.71,58.55,64.89
+"318",NA,"Zaragoza (Saragossa), Spain",54.8,NA,37.56,NA,NA,69.32
+"319",NA,NA,54.54,26.23,41.27,55.82,47.98,32.31
+"320",NA,"Manama, Bahrain",54.3,28.18,42.06,42.9,50.3,NA
+"321",NA,"Shanghai, China",53.9,44.47,49.48,57.06,42.55,53
+"322",NA,"Riyadh, Saudi Arabia",53.85,16.29,36.24,43.62,43.19,92.73
+"323",NA,"Tartu, Estonia",53.79,NA,35.68,45.81,54.85,60.53
+"324",NA,"Vigo, Spain",NA,17.42,36.55,43.92,55.09,74.98
+"325",NA,NA,53.28,20.95,38.13,49.6,47.29,71.04
+"326",NA,NA,52.97,22.45,NA,45.34,55.18,70.04
+"327",NA,"Paphos, Cyprus",52.86,16.35,35.74,43.42,52.53,61.21
+"328",NA,"Makati, Philippines",52.72,28.6,41.41,57.92,29.33,20.57
+"329",NA,"Ajman, United Arab Emirates",52.58,27.92,41.02,38.45,59.57,48.26
+"330",NA,"Jeddah (Jiddah), Saudi Arabia",52.57,11.1,33.13,43.47,36.65,76.08
+"331",NA,"Malaga, Spain",52.52,26.1,40.14,44.09,51.62,65.84
+"332",NA,"Amman, Jordan",NA,10.63,32.7,41.65,48.02,29.51
+"333",NA,"Granada, Spain",52.03,16.04,35.16,44.53,46.02,81.61
+"334",NA,NA,52,15.11,34.71,43.85,47.54,NA
+"335",NA,"Prague, Czech Republic",51.78,26.02,39.7,45.19,42.51,71.96
+"336",NA,"Murcia, Spain",NA,16.05,NA,44.19,51.54,NA
+"337",NA,"Lisbon, Portugal",NA,31.39,42.18,40.29,NA,48.26
+"338",NA,"Maribor, Slovenia",51.64,14.31,NA,44.32,NA,68.02
+"339",NA,"Split, Croatia",NA,15.72,34.78,44.75,46.61,42.48
+"340",NA,"Kingston, Jamaica",51.57,18.43,36.04,53.78,38.03,26.11
+"341",NA,"Riga, Latvia",51.54,14.75,34.29,38.97,50.95,NA
+"342",NA,"Alicante, Spain",51.47,NA,36.65,43.08,52.15,79.93
+"343",NA,"Muscat, Oman",51.24,18.54,35.91,47.14,NA,86.53
+"344",NA,"Shenzhen, China",51.08,28.06,40.29,57.71,34.42,68.96
+"345",NA,"Santa Cruz de Tenerife, Spain",50.92,19.62,36.25,NA,52.25,63.82
+"346",NA,"Dakar, Senegal",50.87,23.33,37.96,42.88,46.64,23.14
+"347",NA,"Cascais, Portugal",50.86,38.41,45.03,38.25,55.25,41.22
+"348",NA,"Las Palmas de Gran Canaria, Spain",NA,23.41,NA,45.62,47.89,56.7
+"349",NA,"Addis Ababa, Ethiopia",50.49,17.44,35,36.77,21.45,NA
+"350",NA,"Bangkok, Thailand",NA,26.45,39.15,50.2,NA,29.77
+"351",NA,"Rijeka, Croatia",50.14,12.26,NA,44.3,46.92,NA
+"352",NA,"Phnom Penh, Cambodia",50.1,NA,35.44,54.48,23.19,14.8
+"353",NA,"Zagreb, Croatia",NA,17.1,34.51,42.03,40.36,55.08
+"354",NA,"Beijing, China",NA,39.16,NA,47.4,39.45,53.08
+"355",NA,"Bratislava, Slovakia",49.44,23.04,37.06,41.99,44.73,62.63
+"356",NA,"Porto, Portugal",49.37,23.62,37.3,40.25,NA,NA
+"357",NA,"Brno, Czech Republic",49.29,20.98,36.02,42.93,39.2,65.14
+"358",NA,"Hangzhou, China",NA,NA,NA,58,33.46,64.95
+"359",NA,"Paramaribo, Suriname",49.19,10.1,30.87,48.25,61.28,16.38
+"360",NA,"Funchal, Portugal",49.16,NA,35.78,38.93,40.06,46.47
+"361",NA,"Sharjah, United Arab Emirates",49.03,54.01,NA,41.01,36.79,56.71
+"362",NA,"Ad Dammam, Saudi Arabia",48.45,NA,31.67,NA,34.27,93.58
+"363",NA,"Olomouc, Czech Republic",48.21,14.98,32.63,NA,33.18,61.3
+"364",NA,"Kosice, Slovakia",48.19,17.39,33.75,39.27,44.47,51.15
+"365",NA,"Kuwait City, Kuwait",NA,31.21,40.13,35.81,47.2,68.84
+"366",NA,"San Jose, Costa Rica",NA,17.47,NA,46.14,43.16,42.86
+"367",NA,"Coimbra, Portugal",47.35,NA,32.43,39.88,NA,53.04
+"368",NA,"Abidjan, Ivory Coast",47.06,19.73,34.25,NA,32.22,6.27
+"369",NA,"Braga, Portugal",46.99,19.1,33.92,39.26,39.03,NA
+"370",NA,"Vilnius, Lithuania",46.94,NA,33.95,36.84,NA,62.14
+"371",NA,"Ostrava, Czech Republic",46.47,13.56,31.04,41.28,NA,65.17
+"372",NA,"Aveiro, Portugal",46.46,17.99,NA,39.33,37.07,43.88
+"373",NA,"Budapest, Hungary",46.13,16.01,32.01,39.18,NA,52.66
+"374",NA,NA,45.94,16.81,32.28,51,38.07,58.75
+"375",NA,"Harare, Zimbabwe",45.69,9.56,28.75,37.05,NA,17.59
+"376",NA,"Leiria, Portugal",45.67,15.46,31.51,36.37,45.81,49.68
+"377",NA,"Santiago, Chile",45.64,NA,NA,40.12,47.92,32.08
+"378",NA,NA,NA,14.02,30.65,44.47,37.11,21.83
+"379",NA,NA,45.31,12.08,29.73,37.6,48.6,15.87
+"380",NA,"Johannesburg, South Africa",44.87,15.89,31.28,35.54,41.17,72.15
+"381",NA,"Kaunas, Lithuania",44.74,13.22,29.97,36.18,45.77,NA
+"382",NA,"Santo Domingo, Dominican Republic",44.66,10.69,28.74,41.48,35.56,22.21
+"383",NA,"Guatemala City, Guatemala",44.59,NA,NA,42.19,33.71,NA
+"384",NA,"Phuket, Thailand",44.34,16.39,31.24,46.43,NA,27.28
+"385",NA,NA,43.94,20.55,32.98,NA,42.14,NA
+"386",NA,"Chengdu, China",43.81,NA,29.31,50.73,27.4,56.04
+"387",NA,"Osijek, Croatia",43.61,9.63,27.68,37.23,35.41,56.42
+"388",NA,"Quezon City, Philippines",43.26,11,28.14,43.83,NA,19.69
+"389",NA,"Gdynia, Poland",42.92,15.33,29.98,34.59,38.35,50.58
+"390",NA,"Bali, Indonesia",42.87,16.31,30.42,46.21,NA,14.1
+"391",NA,"Pretoria, South Africa",42.76,14.21,29.38,35.05,36.46,87.26
+"392",NA,"Gaborone, Botswana",42.7,11.81,28.22,35.71,52.25,51.4
+"393",NA,"Nanjing, China",NA,15.91,NA,43.25,28.47,72.85
+"394",NA,"Sofia, Bulgaria",42.24,14.58,29.27,36.68,38.75,55.31
+"395",NA,"Chiang Mai, Thailand",42.22,NA,28.37,46.46,NA,29.88
+"396",NA,"Moscow, Russia",42.2,28.04,35.56,33.38,44.85,49.56
+"397",NA,"Pattaya, Thailand",42.13,13.98,28.93,42.79,26.5,23.25
+"398",NA,"Gdansk, Poland",41.32,17.95,30.37,35,35.02,64.36
+"399",NA,"Krakow (Cracow), Poland",41.3,17.76,30.26,33.13,NA,67.1
+"400",NA,NA,41.12,17.52,30.06,33.9,35.12,59.89
+"401",NA,"Guangzhou, China",41.11,21.43,31.88,43.52,27.08,70.13
+"402",NA,"Cape Town, South Africa",40.98,22.64,32.38,34.81,41.41,NA
+"403",NA,NA,40.86,16.46,29.42,41.78,23.44,NA
+"404",NA,NA,40.83,12.15,NA,37.71,NA,NA
+"405",NA,"Manila, Philippines",NA,25.18,33.46,NA,25.18,22.24
+"406",NA,"Poznan, Poland",40.72,NA,28.63,33.89,35.71,58.32
+"407",NA,"Quito, Ecuador",40.48,12.62,27.42,NA,31.34,29.69
+"408",NA,"Durban, South Africa",40.33,14.69,28.31,33.58,37.72,73.88
+"409",NA,"Katowice, Poland",40.26,14.14,28.02,34.41,33.37,NA
+"410",NA,"Cluj-Napoca, Romania",40.16,14.75,28.25,35.43,36.57,53.12
+"411",NA,"Bucharest, Romania",40.1,14.84,28.26,33.5,39.45,NA
+"412",NA,"Szeged, Hungary",40.08,10.23,26.09,NA,32.33,49.5
+"413",NA,NA,40.05,13.88,27.78,30.1,34.51,36.05
+"414",NA,NA,40.03,10.81,NA,37.04,30.39,49.86
+"415",NA,NA,39.98,13.89,NA,44.89,22.83,60.88
+"416",NA,"Marrakech, Morocco",39.94,12.28,NA,32.34,33.7,29.96
+"417",NA,"Podgorica, Montenegro",NA,11.54,26.31,32.87,30.69,35.98
+"418",NA,"Szczecin, Poland",39.31,15.38,28.1,33.75,32.29,51.05
+"419",NA,"Kota Kinabalu, Malaysia",39.25,9.87,25.48,47.29,20.16,39.43
+"420",NA,"Kuala Lumpur, Malaysia",39.25,14.13,NA,41.08,24.67,64.04
+"421",NA,"Varna, Bulgaria",39.14,8.32,24.7,34.27,36.27,NA
+"422",NA,NA,39.04,NA,29.55,39.43,35.29,44.68
+"423",NA,"Cebu, Philippines",NA,13.14,26.9,44.17,21.33,17.64
+"424",NA,NA,39.01,17.85,29.09,39.91,21.57,NA
+"425",NA,"Cancun, Mexico",38.85,15.34,NA,35.22,41.42,38.24
+"426",NA,NA,38.74,20.04,29.97,41.01,32.77,21.12
+"427",NA,"Tirana, Albania",38.68,11.33,25.86,30.99,29.86,31.15
+"428",NA,"Guayaquil, Ecuador",38.57,11.65,25.95,NA,NA,31.41
+"429",NA,"Monterrey, Mexico",38.46,15.34,27.62,37.47,36.54,NA
+"430",NA,"Plovdiv, Bulgaria",38.42,NA,24.84,34.5,31.14,NA
+"431",NA,"Sarajevo, Bosnia And Herzegovina",38.42,9.27,24.76,32.34,NA,43.73
+"432",NA,"Lublin, Poland",38.04,13.89,26.72,30.29,31.12,60.2
+"433",NA,"Erbil (Irbil), Iraq",38.03,12.56,NA,32.56,32.77,39.88
+"434",NA,"Santa Cruz, Bolivia",38.01,NA,25.63,33.02,30.64,NA
+"435",NA,"Isfahan (Esfahan), Iran",37.98,17.23,28.25,24.37,18.47,NA
+"436",NA,"Lodz, Poland",NA,13.94,26.69,31.45,30.2,57.76
+"437",NA,NA,37.81,NA,28.12,32.33,36.46,40.77
+"438",NA,NA,37.61,7.92,23.69,32.6,NA,NA
+"439",NA,"Penang, Malaysia",37.61,9.31,24.34,39.6,21.49,65.85
+"440",NA,"La Paz, Bolivia",NA,10.87,25.03,33.15,27.83,34.57
+"441",NA,"Sao Paulo, Brazil",NA,14.49,26.72,32.13,31.55,29.23
+"442",NA,"Novi Sad, Serbia",37.44,10.32,24.73,NA,29.78,42.73
+"443",NA,"Mexico City, Mexico",37.41,20.93,29.68,35.45,37.82,36.74
+"444",NA,NA,NA,61.89,48.84,39.28,29.59,8.3
+"445",NA,"Constanta, Romania",37.26,11.24,25.06,30.69,37.25,NA
+"446",NA,"Iasi, Romania",37.13,11.03,24.9,31.26,33.64,44.06
+"447",NA,"Hanoi, Vietnam",NA,12.21,NA,38.66,19.21,NA
+"448",NA,"Tangier, Morocco",36.85,10.25,24.38,34.34,26.53,33.16
+"449",NA,"Brasilia, Brazil",36.84,11.08,24.77,29.88,31.75,NA
+"450",NA,NA,36.82,8.09,23.35,32.3,34.44,42.39
+"451",NA,NA,36.74,9.45,23.95,NA,17.87,18.71
+"452",NA,"Rio de Janeiro, Brazil",36.67,11.51,24.88,31.46,29.14,18.93
+"453",NA,"Brasov, Romania",NA,12.18,25.17,33.97,30.98,44.65
+"454",NA,"Casablanca, Morocco",NA,NA,25.76,31.7,26.04,34.07
+"455",NA,"Damascus, Syria",36.38,8.96,23.53,NA,28.65,5.03
+"456",NA,"Sibiu, Romania",36.19,9.57,23.71,32.76,33.8,48.27
+"457",NA,"Timisoara, Romania",36.16,NA,24.47,32.16,32.52,54.26
+"458",NA,"Kampala, Uganda",35.98,11.5,24.5,32.5,26.61,9.83
+"459",NA,"Nairobi, Kenya",NA,13.57,25.42,32.25,30.62,29.23
+"460",NA,"Merida, Mexico",35.7,11.58,24.4,35.71,36.46,NA
+"461",NA,"Rabat, Morocco",NA,NA,25.68,31.64,NA,34.67
+"462",NA,"Qingdao, Shandong, China",35.48,NA,NA,38.36,24.27,74.04
+"463",NA,NA,NA,11.31,NA,37.11,30.27,51.02
+"464",NA,NA,NA,7.21,22.18,37.61,15.98,21.84
+"465",NA,"Oradea, Romania",35.35,7.91,22.49,NA,NA,49.45
+"466",NA,"Buenos Aires, Argentina",35.25,10.73,23.75,28.54,34.35,26.89
+"467",NA,"Dhaka, Bangladesh",35.12,6.21,21.57,31.49,24.41,23.81
+"468",NA,"Skopje, North Macedonia",34.9,8.07,22.32,28.77,NA,37.02
+"469",NA,"Ulaanbaatar, Mongolia",34.86,11.11,23.73,36.15,23.35,25.02
+"470",NA,"Craiova, Romania",NA,8.59,22.54,31.58,27.98,52.91
+"471",NA,"Agadir, Morocco",34.81,7.13,21.84,30.66,33.57,31.37
+"472",NA,"Baghdad, Iraq",34.81,12.34,24.28,30.46,26.09,39.03
+"473",NA,"Surabaya, Indonesia",34.65,10.31,23.24,37.39,17.58,NA
+"474",NA,"Lima, Peru",34.6,14.52,NA,33.18,25.45,28.89
+"475",NA,"Arad, Romania",34.49,6.28,21.27,32.69,24.98,NA
+"476",NA,"Florianopolis, Brazil",34.39,NA,22.81,27.66,30.26,29.31
+"477",NA,"Cuenca, Ecuador",34.21,12.05,NA,32.87,23.99,30.84
+"478",NA,"Kiev (Kyiv), Ukraine",34.11,18.04,26.58,28.93,30.73,48.16
+"479",NA,"Gurgaon, India",NA,9.8,22.71,34.07,31.55,74.9
+"480",NA,"Guadalajara, Mexico",34.05,16.78,25.96,34.1,31.66,35.99
+"481",NA,"Kazan, Russia",34.02,12.9,24.12,NA,32.69,NA
+"482",NA,"Yerevan, Armenia",34.01,NA,23.64,27.81,31.01,29.73
+"483",NA,NA,NA,16.59,25.82,31.15,22.16,13.54
+"484",NA,"Nizhny Novgorod, Russia",33.89,NA,22.65,27.35,35.03,34.95
+"485",NA,NA,33.62,13.86,24.36,39.57,NA,NA
+"486",NA,"Lusaka, Zambia",33.57,10.18,NA,32.85,23.63,NA
+"487",NA,"Nis, Serbia",33.4,7.26,21.15,26.46,24.98,NA
+"488",NA,NA,NA,NA,22.77,29.47,27.76,NA
+"489",NA,"Minsk, Belarus",NA,12.07,23.08,28.51,NA,31.15
+"490",NA,NA,32.65,9.79,21.94,NA,33.82,36.59
+"491",NA,"Mashhad, Iran",32.54,18.69,26.05,26.44,25.95,22.68
+"492",NA,NA,32.5,NA,20.97,25.09,21.89,20.99
+"493",NA,"Cairo, Egypt",32.39,7.41,20.68,28.71,28.52,24.38
+"494",NA,"Porto Alegre, Brazil",NA,8.88,21.34,30.16,24.97,31.24
+"495",NA,"Kigali, Rwanda",32.27,16.04,24.66,NA,NA,26.37
+"496",NA,NA,32.26,9.98,21.81,28.73,31.27,NA
+"497",NA,NA,32.1,8.69,21.13,NA,30.09,36.94
+"498",NA,"Odessa (Odesa), Ukraine",31.94,10.74,22.01,26.48,30.19,32.72
+"499",NA,"Chisinau, Moldova",31.82,10.41,21.78,25.52,26.56,34.38
+"500",NA,NA,31.81,7.62,20.47,27.2,25.31,32.28
+"501",NA,"Baku, Azerbaijan",31.6,9.46,NA,27.73,29.83,28.03
+"502",NA,"Tehran, Iran",31.47,NA,27.41,21.75,25.88,14.55
+"503",NA,"Istanbul, Turkey",31.14,9.97,21.22,23.77,NA,28.73
+"504",NA,"Tbilisi, Georgia",30.95,10.25,21.25,26.67,29.06,29.47
+"505",NA,"Yogyakarta, Indonesia",30.8,NA,20.94,36.08,13.91,12.16
+"506",NA,"Asuncion, Paraguay",30.62,10.31,21.1,25.52,24.9,27.38
+"507",NA,"Kharkiv, Ukraine",30.46,11.6,21.62,NA,NA,33.98
+"508",NA,"Astana (Nur-Sultan), Kazakhstan",30.3,NA,20.81,25.99,30.31,41
+"509",NA,"Chandigarh, India",30.27,6.26,19.02,31.11,24.36,46.47
+"510",NA,"Almaty, Kazakhstan",30.22,11.95,21.65,NA,NA,33.55
+"511",NA,"Tunis, Tunisia",29.94,NA,18.93,28.83,17.08,24.2
+"512",NA,NA,29.87,4.78,18.11,28.05,22.61,23.16
+"513",NA,NA,29.84,NA,18.98,NA,20.79,21.78
+"514",NA,NA,NA,10.53,20.7,26.62,24.35,38.3
+"515",NA,"Tashkent, Uzbekistan",29.36,10.66,20.59,28.76,27.02,22.63
+"516",NA,"Mumbai, India",29.33,19.72,24.82,29.73,25.17,48.03
+"517",NA,"Dnipro, Ukraine",29.26,10.49,20.46,24.57,NA,32.74
+"518",NA,"Noida, India",29.21,6.37,18.5,29.25,24.46,62.57
+"519",NA,"Medellin, Colombia",28.81,9.47,19.74,NA,22.53,32.78
+"520",NA,"Alexandria, Egypt",28.43,6.64,18.22,27.33,22.78,20.28
+"521",NA,"Barranquilla, Colombia",NA,7.77,18.74,25.66,18.16,27.03
+"522",NA,"Navi Mumbai, India",NA,10.9,20.19,NA,23.14,78.67
+"523",NA,NA,28.37,6.39,18.06,23.44,NA,35.18
+"524",NA,"Delhi, India",28.23,8.46,18.96,27.75,24.45,NA
+"525",NA,NA,28.2,8.59,19.01,NA,NA,102.64
+"526",NA,"Bogota, Colombia",NA,NA,20.29,NA,21.98,26.1
+"527",NA,"Goa, India",27.72,8.47,NA,28.44,24.88,36.29
+"528",NA,"Pune, India",27.57,NA,17.98,28.86,22.75,53.68
+"529",NA,"Ghaziabad, India",27.55,5.26,NA,NA,19.88,54.56
+"530",NA,"Thane, India",27.53,8.26,18.5,30.55,23.84,66.14
+"531",NA,"Ranchi, India",27.33,4.18,16.48,30.58,21.19,38.61
+"532",NA,"Ankara, Turkey",27.17,6.31,NA,21.43,17.97,39.07
+"533",NA,"Hyderabad, India",NA,6.47,NA,29.69,18.17,51.21
+"534",NA,NA,26.56,5.4,16.64,NA,20.03,51.07
+"535",NA,"Bishkek, Kyrgyzstan",26.55,8.34,18.02,24.76,NA,NA
+"536",NA,"Pristina, Kosovo (Disputed Territory)",26.15,9.04,18.13,22.99,19.69,47.48
+"537",NA,"Chennai, India",NA,6.76,17.02,28.88,16.98,46.31
+"538",NA,"Ahmedabad, India",26.01,NA,16.59,28.52,NA,39.11
+"539",NA,"Kolkata, India",25.99,5.57,16.42,28.24,18.89,44.66
+"540",NA,"Cali, Colombia",25.78,7,16.98,22.61,17.95,31.08
+"541",NA,"Guwahati, India",25.61,4.24,15.59,28.59,18.37,39.6
+"542",NA,"Lucknow (Lakhnau), India",NA,4.99,15.84,25.72,20.36,48.19
+"543",NA,"Madurai, India",25.38,3.79,15.26,NA,12.3,32.82
+"544",NA,"Surat, India",25.34,NA,16.8,NA,20.18,41.98
+"545",NA,"Vadodara, India",25.32,4.48,15.55,27.55,19.49,46.1
+"546",NA,"Vijayawada, India",24.95,5.32,15.75,26.24,16.86,37.17
+"547",NA,"Ludhiana, India",24.92,3.7,NA,27.36,18.34,35.75
+"548",NA,NA,24.85,NA,16.45,26.29,14.6,128.47
+"549",NA,"Raipur, India",24.81,4.44,15.26,NA,16.98,63.17
+"550",NA,"Dehradun, India",NA,5.03,15.51,NA,19.88,40.36
+"551",NA,"Nashik, India",24.6,4.74,15.29,27.92,14.48,35.31
+"552",NA,"Indore, India",24.5,NA,15.17,26.47,16.27,40
+"553",NA,"Rajkot, India",24.47,NA,15.09,28.31,16.27,NA
+"554",NA,"Nagpur, India",24.39,4.45,15.04,26.47,NA,42.48
+"555",NA,"Ernakulam, India",24.04,5.82,15.5,26.53,NA,46.52
+"556",NA,"Visakhapatnam, India",NA,5.4,15.3,28.27,14.52,42.7
+"557",NA,"Jaipur, India",23.97,5.04,15.1,24.58,16.53,51.5
+"558",NA,"Patna, India",23.97,3.45,14.35,25.81,18.25,36.78
+"559",NA,"Mangalore, India",23.73,4.58,14.75,27.17,14.87,47.91
+"560",NA,"Bucaramanga, Colombia",23.7,5.93,15.37,18.09,16.7,30.42
+"561",NA,"Coimbatore, India",23.45,4.85,14.73,26.68,15.04,40.73
+"562",NA,"Bhopal, India",NA,NA,14.08,24.45,18.7,45.78
+"563",NA,"Bhubaneswar, India",23.34,4.47,14.49,NA,NA,54.15
+"564",NA,"Mysore, India",23.16,4.92,NA,25.82,14.32,NA
+"565",NA,"Kochi, India",22.9,6.3,15.12,25.89,NA,NA
+"566",NA,"Agra, India",22.81,NA,NA,22.62,19.38,27.91
+"567",NA,"Jammu, India",22.04,2.94,13.08,NA,19.31,NA
+"568",NA,"Thiruvananthapuram, India",21.75,4.43,13.64,22.96,13.59,73.73
+"569",NA,"Kozhikode (Calicut), India",NA,4.5,NA,22.83,12.07,50.02
+"570",NA,"Lahore, Pakistan",21.53,4.03,NA,NA,17.34,24.42
+"571",NA,"Islamabad, Pakistan",21.5,5.79,14.13,18.39,NA,29.52
+"572",NA,"Kabul, Afghanistan",21.35,3.17,12.83,NA,NA,22.79
+"573",NA,"Thrissur, India",21.28,3.89,13.13,24.27,11.39,54.43
+"574",NA,"Kanpur, India",20.79,3.6,12.73,22.19,NA,38.83
+"575",NA,"Karachi, Pakistan",20.75,4.84,13.29,18.48,15.21,NA
+"576",NA,"Rawalpindi, Pakistan",20.52,4.78,13.14,18.51,16.18,NA
+"577",NA,"Multan, Pakistan",18.68,2.94,11.3,18.37,11.8,25.09
+"578",NA,"Peshawar, Pakistan",18.55,2.37,10.97,16.62,14.39,NA
