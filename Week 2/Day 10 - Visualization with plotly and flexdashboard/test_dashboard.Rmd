@@ -1,0 +1,54 @@
+---
+title: "Untitled"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(ggplot2)
+library(plotly)
+library(DT)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+gapminder <- gapminder::gapminder
+
+plot <- gapminder %>% # Which dataset are you using
+  ggplot(aes(lifeExp)) + # Which variable(s) are you plotting
+  geom_histogram() # Which type of plot are you making
+
+ggplotly(plot)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+gapminder <- gapminder::gapminder
+
+gapminder %>% # Which dataset are you using
+  plot_ly(x = ~lifeExp, # Which variable(s) are you plotting
+          type = "histogram") # Which type of plot are you making
+
+```
+
+### Chart C
+
+```{r}
+gapminder <- gapminder::gapminder
+
+DT::datatable(gapminder)
+```
+
