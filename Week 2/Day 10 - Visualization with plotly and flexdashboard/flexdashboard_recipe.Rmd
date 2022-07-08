@@ -1,0 +1,66 @@
+---
+title: "Deploying a flexdashboard"
+author: "Solveig Bjørkholt"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+1. If you haven't already, install the flexdashboard package using `install.packages("flexdashboard")`
+
+```{r, eval = FALSE}
+install.packages("flexdashboard")
+```
+
+
+2. Open a new R Markdown file in RStudio. Choose "From Template", then "Flex Dashboard".
+
+```{r, out.width="90%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/dashboard_making.png")
+```
+
+
+3. Make your dashboard. Find some inspirational dashboards [here](https://rstudio.github.io/flexdashboard/articles/examples.html). An example of how the R Markdown file could look like can be found [here]( https://github.com/sbjorkholt/ISSSV1337/blob/main/Week%202/Day%2010%20-%20Visualization%20with%20plotly%20and%20flexdashboard/test_dashboard.Rmd)
+
+
+4. Save the `.Rmd` file to a folder that is connected to a Github repository (that is, a folder you have cloned from Github).
+
+
+5. Go to the Github repository. Go to "Settings", in the left menu choose "Pages", then click on the drop-down menu and choose "main". The repository needs to be Public for this to work.
+
+```{r, out.width="100%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/github_dashbord1.PNG")
+```
+
+
+6. In the drop-down menu to the right, choose "/docs"^[Choosing */docs* will publish your dashboard from the docs folder. Choosing */root* will publish the dashboard from the main folder. Both work, but it's often tidier to have the dashboard in a separate folder if your repository also contains other things.]. Then hit the "save" button. You should get information that your site is ready to be published at a specific URL, and that the Github Pages source is saved. 
+
+```{r, out.width="100%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/github_dashbord2.PNG")
+```
+
+
+7. Now, go back to RStudio (or your folders on your computer). Make a folder called "docs" in the repository-folder, and place your `.Rmd` file in there. Knit the document so that you get two files, one `.Rmd` file and one `.html` file.
+
+```{r, out.width="100%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/github_dashbord3.PNG")
+```
+
+
+8. First, `pull` all changes from the Github repository. Then, `commit` your "docs" folder to the repository, including both your `.html` file and the `.Rmd` file, and `push` the changes. If you just select the "docs" folder in the Git tab in RStudio, you will automatically select all files in this folder.
+
+```{r, out.width="100%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/github_dashbord5.PNG")
+```
+
+
+9. Wait some minutes. Write the URL that was shown in stage 6 into your browser and end with */name-of-your-file.html*. 
+
+```{r, out.width="100%", fig.align ='center', echo = FALSE}
+knitr::include_graphics("../../figures/github_dashbord4.PNG")
+```
+
+
+10. Give others this URL for them to access your dashboard :) 
